@@ -1,4 +1,4 @@
-#Document Template
+# Document Template
 
 This a LaTeX template to use in the UFSC projects.
 
