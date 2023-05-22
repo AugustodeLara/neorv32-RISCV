@@ -1,22 +1,21 @@
- -- Copyright (C) 2023  Intel Corporation. All rights reserved.
- -- Your use of Intel Corporation's design tools, logic functions 
- -- and other software and tools, and any partner logic 
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
  -- functions, and any output files from any of the foregoing 
  -- (including device programming or simulation files), and any 
  -- associated documentation or information are expressly subject 
- -- to the terms and conditions of the Intel Program License 
- -- Subscription Agreement, the Intel Quartus Prime License Agreement,
- -- the Intel FPGA IP License Agreement, or other applicable license
- -- agreement, including, without limitation, that your use is for
- -- the sole purpose of programming logic devices manufactured by
- -- Intel and sold by Intel or its authorized distributors.  Please
- -- refer to the applicable agreement for further details, at
- -- https://fpgasoftware.intel.com/eula.
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
  -- 
- -- This is a Quartus Prime output file. It is for reporting purposes only, and is
- -- not intended for use as a Quartus Prime input file. This file cannot be used
- -- to make Quartus Prime pin assignments - for instructions on how to make pin
- -- assignments, please see Quartus Prime help.
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
  ---------------------------------------------------------------------------------
 
 
@@ -28,32 +27,32 @@
  -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --                  Bank 3:       2.5V
- --                  Bank 4:       2.5V
- --                  Bank 5:       2.5V
- --                  Bank 6:       2.5V
- --                  Bank 7:       2.5V
- --                  Bank 8:  2.5V
- --                  Bank 9:  2.5V
+ --					Bank 3:		2.5V
+ --					Bank 4:		2.5V
+ --					Bank 5:		2.5V
+ --					Bank 6:		2.5V
+ --					Bank 7:		2.5V
+ --					Bank 8:	2.5V
+ --					Bank 9:	2.5V
  -- RREF          : External reference resistor for the quad, MUST be connected to
  --                 GND via a 2k Ohm resistor.
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
- --                  It can also be used to report unused dedicated pins. The connection
- --                  on the board for unused dedicated pins depends on whether this will
- --                  be used in a future design. One example is device migration. When
- --                  using device migration, refer to the device pin-tables. If it is a
- --                  GND pin in the pin table or if it will not be used in a future design
- --                  for another purpose the it MUST be connected to GND. If it is an unused
- --                  dedicated pin, then it can be connected to a valid signal on the board
- --                  (low, high, or toggling) if that signal is required for a different
- --                  revision of the design.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
  -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
- --                  This pin should be connected to GND. It may also be connected  to a
- --                  valid signal  on the board  (low, high, or toggling)  if that signal
- --                  is required for a different revision of the design.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
  -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
- --                  either individually through a 10k Ohm resistor to GND or tie all pins
- --                  together and connect through a single 10k Ohm resistor to GND.
+ --           	    either individually through a 10k Ohm resistor to GND or tie all pins
+ --           	    together and connect through a single 10k Ohm resistor to GND.
  -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
  -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
  -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
@@ -71,39 +70,39 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 CHIP  "nerrv32"  ASSIGNED TO AN: EP4CGX150DF31C7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 NC                           : A2        :        :                   :         :           :                
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : A3        : input  : 2.5 V             :         : 9         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-wb_dat_o[20]                 : A5        : output : 2.5 V             :         : 8         : N              
-wb_dat_i[31]                 : A6        : input  : 2.5 V             :         : 8         : N              
-spi_csn_o[0]                 : A7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
-cfs_in_i[7]                  : A9        : input  : 2.5 V             :         : 8         : N              
-gpio_i[63]                   : A10       : input  : 2.5 V             :         : 8         : N              
-wb_adr_o[6]                  : A11       : output : 2.5 V             :         : 8         : N              
-xirq_i[25]                   : A12       : input  : 2.5 V             :         : 8         : N              
-wb_dat_o[6]                  : A13       : output : 2.5 V             :         : 8         : N              
-cfs_out_o[14]                : A14       : output : 2.5 V             :         : 8         : N              
-GND+                         : A15       :        :                   :         : 7         :                
-gpio_i[32]                   : A16       : input  : 2.5 V             :         : 7         : N              
-cfs_in_i[16]                 : A17       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
-gpio_o[60]                   : A20       : output : 2.5 V             :         : 7         : N              
-wb_dat_i[23]                 : A21       : input  : 2.5 V             :         : 7         : N              
-gpio_i[47]                   : A22       : input  : 2.5 V             :         : 7         : N              
-cfs_out_o[18]                : A23       : output : 2.5 V             :         : 7         : N              
-wb_dat_i[13]                 : A24       : input  : 2.5 V             :         : 7         : N              
-jtag_trst_i                  : A25       : input  : 2.5 V             :         : 7         : N              
-gpio_i[39]                   : A26       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A27       :        :                   :         : 7         :                
-jtag_tdo_o                   : A28       : output : 2.5 V             :         : 7         : N              
-wb_dat_o[21]                 : A29       : output : 2.5 V             :         : 7         : N              
+wb_adr_o[18]                 : A4        : output : 2.5 V             :         : 8         : N              
+xirq_i[22]                   : A5        : input  : 2.5 V             :         : 8         : N              
+cfs_out_o[28]                : A6        : output : 2.5 V             :         : 8         : N              
+wb_dat_o[0]                  : A7        : output : 2.5 V             :         : 8         : N              
+fencei_o                     : A8        : output : 2.5 V             :         : 8         : N              
+wb_dat_i[16]                 : A9        : input  : 2.5 V             :         : 8         : N              
+gpio_o[47]                   : A10       : output : 2.5 V             :         : 8         : N              
+wb_dat_i[8]                  : A11       : input  : 2.5 V             :         : 8         : N              
+pwm_o[4]                     : A12       : output : 2.5 V             :         : 8         : N              
+gpio_i[20]                   : A13       : input  : 2.5 V             :         : 8         : N              
+cfs_in_i[11]                 : A14       : input  : 2.5 V             :         : 8         : N              
+gpio_i[41]                   : A15       : input  : 2.5 V             :         : 7         : N              
+xirq_i[2]                    : A16       : input  : 2.5 V             :         : 7         : N              
+mext_irq_i                   : A17       : input  : 2.5 V             :         : 7         : N              
+xirq_i[17]                   : A18       : input  : 2.5 V             :         : 7         : N              
+cfs_out_o[4]                 : A19       : output : 2.5 V             :         : 7         : N              
+wb_tag_o[0]                  : A20       : output : 2.5 V             :         : 7         : N              
+wb_dat_i[3]                  : A21       : input  : 2.5 V             :         : 7         : N              
+cfs_in_i[28]                 : A22       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A23       :        :                   :         : 7         :                
+gpio_i[28]                   : A24       : input  : 2.5 V             :         : 7         : N              
+gpio_o[56]                   : A25       : output : 2.5 V             :         : 7         : N              
+gpio_i[55]                   : A26       : input  : 2.5 V             :         : 7         : N              
+gpio_i[47]                   : A27       : input  : 2.5 V             :         : 7         : N              
+gpio_i[13]                   : A28       : input  : 2.5 V             :         : 7         : N              
+uart0_rts_o                  : A29       : output : 2.5 V             :         : 7         : Y              
 GXB_GND*                     : AA1       :        :                   :         : QL0       :                
 GXB_GND*                     : AA2       :        :                   :         : QL0       :                
 GND                          : AA3       : gnd    :                   :         :           :                
@@ -115,25 +114,25 @@ GND                          : AA8       : gnd    :                   :         
 VCCA                         : AA9       : power  :                   : 2.5V    :           :                
 VCCINT                       : AA10      : power  :                   : 1.2V    :           :                
 GND                          : AA11      : gnd    :                   :         :           :                
-gpio_o[28]                   : AA12      : output : 2.5 V             :         : 3         : N              
-cfs_in_i[1]                  : AA13      : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[12]                 : AA12      : output : 2.5 V             :         : 3         : N              
+cfs_out_o[24]                : AA13      : output : 2.5 V             :         : 3         : N              
 VCCINT                       : AA14      : power  :                   : 1.2V    :           :                
-cfs_out_o[9]                 : AA15      : output : 2.5 V             :         : 3         : N              
-wb_adr_o[1]                  : AA16      : output : 2.5 V             :         : 3         : N              
-mtime_irq_i                  : AA17      : input  : 2.5 V             :         : 4         : N              
-wb_adr_o[20]                 : AA18      : output : 2.5 V             :         : 4         : N              
+xirq_i[10]                   : AA15      : input  : 2.5 V             :         : 3         : N              
+spi_csn_o[7]                 : AA16      : output : 2.5 V             :         : 3         : N              
+gpio_o[46]                   : AA17      : output : 2.5 V             :         : 4         : N              
+cfs_in_i[18]                 : AA18      : input  : 2.5 V             :         : 4         : N              
 GND                          : AA19      : gnd    :                   :         :           :                
-cfs_in_i[5]                  : AA20      : input  : 2.5 V             :         : 4         : N              
-gpio_o[54]                   : AA21      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
+gpio_i[58]                   : AA20      : input  : 2.5 V             :         : 4         : N              
+wb_dat_o[26]                 : AA21      : output : 2.5 V             :         : 4         : N              
+spi_csn_o[3]                 : AA22      : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : AA23      : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : AA24      : power  :                   : 2.5V    : 5         :                
-gpio_o[48]                   : AA25      : output : 2.5 V             :         : 5         : N              
+gpio_i[27]                   : AA25      : input  : 2.5 V             :         : 5         : N              
 rstn_i                       : AA26      : input  : 2.5 V             :         : 5         : Y              
-cfs_out_o[0]                 : AA27      : output : 2.5 V             :         : 5         : N              
-cfs_in_i[3]                  : AA28      : input  : 2.5 V             :         : 5         : N              
-cfs_in_i[14]                 : AA29      : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA30      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA27      :        :                   :         : 5         :                
+gpio_o[12]                   : AA28      : output : 2.5 V             :         : 5         : N              
+cfs_out_o[7]                 : AA29      : output : 2.5 V             :         : 5         : N              
+gpio_i[37]                   : AA30      : input  : 2.5 V             :         : 5         : N              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 GXB_NC                       : AB3       :        :                   :         : QL0       :                
@@ -144,26 +143,26 @@ GND                          : AB7       : gnd    :                   :         
 VCCINT                       : AB8       : power  :                   : 1.2V    :           :                
 CONF_DONE                    : AB9       :        :                   :         : 3         :                
 GND                          : AB10      : gnd    :                   :         :           :                
-gpio_i[36]                   : AB11      : input  : 2.5 V             :         : 3         : N              
+gpio_i[60]                   : AB11      : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AB12      : power  :                   : 2.5V    : 3         :                
-gpio_i[16]                   : AB13      : input  : 2.5 V             :         : 3         : N              
-gpio_o[58]                   : AB14      : output : 2.5 V             :         : 3         : N              
+wb_adr_o[22]                 : AB13      : output : 2.5 V             :         : 3         : N              
+gpio_o[9]                    : AB14      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AB15      : power  :                   : 2.5V    : 3         :                
-cfs_out_o[2]                 : AB16      : output : 2.5 V             :         : 3         : N              
-wb_err_i                     : AB17      : input  : 2.5 V             :         : 4         : N              
+wb_adr_o[16]                 : AB16      : output : 2.5 V             :         : 3         : N              
+wb_dat_i[24]                 : AB17      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AB18      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AB19      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AB20      : power  :                   : 2.5V    : 4         :                
-gpio_o[49]                   : AB21      : output : 2.5 V             :         : 4         : N              
-wb_dat_i[12]                 : AB22      : input  : 2.5 V             :         : 4         : N              
+cfs_out_o[0]                 : AB21      : output : 2.5 V             :         : 4         : N              
+wb_adr_o[15]                 : AB22      : output : 2.5 V             :         : 4         : N              
 VCCD_PLL                     : AB23      : power  :                   : 1.2V    :           :                
 VCCA                         : AB24      : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5         :                
-wb_dat_i[9]                  : AB26      : input  : 2.5 V             :         : 5         : N              
-cfs_out_o[8]                 : AB27      : output : 2.5 V             :         : 5         : N              
-gpio_i[55]                   : AB28      : input  : 2.5 V             :         : 5         : N              
-wb_adr_o[16]                 : AB29      : output : 2.5 V             :         : 5         : N              
-wb_adr_o[12]                 : AB30      : output : 2.5 V             :         : 5         : N              
+cfs_out_o[17]                : AB25      : output : 2.5 V             :         : 5         : N              
+gpio_o[18]                   : AB26      : output : 2.5 V             :         : 5         : N              
+wb_adr_o[23]                 : AB27      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 5         :                
+gpio_i[40]                   : AB29      : input  : 2.5 V             :         : 5         : N              
+gpio_o[22]                   : AB30      : output : 2.5 V             :         : 5         : N              
 GXB_GND*                     : AC1       :        :                   :         : QL0       :                
 GXB_GND*                     : AC2       :        :                   :         : QL0       :                
 GND                          : AC3       : gnd    :                   :         :           :                
@@ -179,7 +178,7 @@ VCCIO3                       : AC12      : power  :                   : 2.5V    
 VCCIO3                       : AC13      : power  :                   : 2.5V    : 3         :                
 GND                          : AC14      : gnd    :                   :         :           :                
 VCCIO3                       : AC15      : power  :                   : 2.5V    : 3         :                
-gpio_i[28]                   : AC16      : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[11]                 : AC16      : output : 2.5 V             :         : 3         : N              
 GND                          : AC17      : gnd    :                   :         :           :                
 VCCIO4                       : AC18      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AC19      : power  :                   : 2.5V    : 4         :                
@@ -190,398 +189,398 @@ GND                          : AC23      : gnd    :                   :         
 GND                          : AC24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
 GND                          : AC26      : gnd    :                   :         :           :                
-wb_dat_o[14]                 : AC27      : output : 2.5 V             :         : 5         : N              
-cfs_in_i[15]                 : AC28      : input  : 2.5 V             :         : 5         : N              
+cfs_in_i[9]                  : AC27      : input  : 2.5 V             :         : 5         : N              
+cfs_in_i[2]                  : AC28      : input  : 2.5 V             :         : 5         : N              
 GND                          : AC29      : gnd    :                   :         :           :                
-wb_dat_o[9]                  : AC30      : output : 2.5 V             :         : 5         : N              
+xip_dat_o                    : AC30      : output : 2.5 V             :         : 5         : N              
 GND                          : AD1       : gnd    :                   :         :           :                
 GND                          : AD2       : gnd    :                   :         :           :                
 VCCA_GXB                     : AD3       : power  :                   : 2.5V    :           :                
 VCCL_GXB                     : AD4       : power  :                   : 1.2V    :           :                
 GND                          : AD5       : gnd    :                   :         :           :                
-cfs_out_o[15]                : AD6       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD6       :        :                   :         : 3         :                
 MSEL0                        : AD7       :        :                   :         : 3         :                
 MSEL1                        : AD8       :        :                   :         : 3         :                
-gpio_o[23]                   : AD9       : output : 2.5 V             :         : 3         : N              
-gpio_i[58]                   : AD10      : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[27]                 : AD9       : output : 2.5 V             :         : 3         : N              
+xirq_i[14]                   : AD10      : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD11      : power  :                   : 2.5V    : 3         :                
 VCCIO3                       : AD12      : power  :                   : 2.5V    : 3         :                
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
 VCCIO3                       : AD14      : power  :                   : 2.5V    : 3         :                
 VCCIO3                       : AD15      : power  :                   : 2.5V    : 3         :                
-gpio_o[50]                   : AD16      : output : 2.5 V             :         : 4         : N              
+gpio_i[43]                   : AD16      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD17      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AD18      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AD19      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
 VCCIO4                       : AD21      : power  :                   : 2.5V    : 4         :                
-gpio_i[12]                   : AD22      : input  : 2.5 V             :         : 4         : N              
-wb_dat_o[11]                 : AD23      : output : 2.5 V             :         : 4         : N              
-xirq_i[26]                   : AD24      : input  : 2.5 V             :         : 4         : N              
+pwm_o[3]                     : AD22      : output : 2.5 V             :         : 4         : N              
+wb_dat_o[13]                 : AD23      : output : 2.5 V             :         : 4         : N              
+wb_adr_o[17]                 : AD24      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5         :                
+spi_clk_o                    : AD26      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5         :                
-gpio_o[47]                   : AD28      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD29      :        :                   :         : 5         :                
-gpio_o[8]                    : AD30      : output : 2.5 V             :         : 5         : N              
+mtime_irq_i                  : AD28      : input  : 2.5 V             :         : 5         : N              
+gpio_o[8]                    : AD29      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD30      :        :                   :         : 5         :                
 RREF                         : AE1       :        :                   :         :           :                
 GND                          : AE2       : gnd    :                   :         :           :                
-gpio_i[19]                   : AE3       : input  : 2.5 V             :         : 3         : N              
-cfs_out_o[17]                : AE4       : output : 2.5 V             :         : 3         : N              
-wb_adr_o[21]                 : AE5       : output : 2.5 V             :         : 3         : N              
-sdi_dat_o                    : AE6       : output : 2.5 V             :         : 3         : N              
+wb_tag_o[2]                  : AE3       : output : 2.5 V             :         : 3         : N              
+cfs_in_i[15]                 : AE4       : input  : 2.5 V             :         : 3         : N              
+spi_csn_o[1]                 : AE5       : output : 2.5 V             :         : 3         : N              
+jtag_trst_i                  : AE6       : input  : 2.5 V             :         : 3         : N              
 ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : AE7       : output : 2.5 V             :         : 3         : N              
-uart0_cts_i                  : AE8       : input  : 2.5 V             :         : 3         : N              
-spi_csn_o[2]                 : AE9       : output : 2.5 V             :         : 3         : N              
-gpio_o[27]                   : AE10      : output : 2.5 V             :         : 3         : N              
-gpio_i[30]                   : AE11      : input  : 2.5 V             :         : 3         : N              
-wb_dat_o[19]                 : AE12      : output : 2.5 V             :         : 3         : N              
-gpio_o[38]                   : AE13      : output : 2.5 V             :         : 3         : N              
-wb_dat_i[8]                  : AE14      : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :         : 3         :                
-gpio_i[7]                    : AE16      : input  : 2.5 V             :         : 4         : N              
-wb_dat_i[10]                 : AE17      : input  : 2.5 V             :         : 4         : N              
-gpio_i[4]                    : AE18      : input  : 2.5 V             :         : 4         : N              
-wb_dat_o[30]                 : AE19      : output : 2.5 V             :         : 4         : N              
-gpio_o[63]                   : AE20      : output : 2.5 V             :         : 4         : N              
-wb_dat_i[16]                 : AE21      : input  : 2.5 V             :         : 4         : N              
-xirq_i[15]                   : AE22      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4         :                
-cfs_out_o[12]                : AE25      : output : 2.5 V             :         : 5         : N              
-wb_dat_i[14]                 : AE26      : input  : 2.5 V             :         : 5         : N              
-gpio_o[15]                   : AE27      : output : 2.5 V             :         : 5         : N              
-wb_dat_o[31]                 : AE28      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE29      :        :                   :         : 5         :                
-xirq_i[5]                    : AE30      : input  : 2.5 V             :         : 5         : N              
+gpio_i[51]                   : AE8       : input  : 2.5 V             :         : 3         : N              
+gpio_o[17]                   : AE9       : output : 2.5 V             :         : 3         : N              
+gpio_i[38]                   : AE10      : input  : 2.5 V             :         : 3         : N              
+pwm_o[8]                     : AE11      : output : 2.5 V             :         : 3         : N              
+pwm_o[1]                     : AE12      : output : 2.5 V             :         : 3         : N              
+cfs_in_i[23]                 : AE13      : input  : 2.5 V             :         : 3         : N              
+gpio_o[63]                   : AE14      : output : 2.5 V             :         : 3         : N              
+wb_adr_o[14]                 : AE15      : output : 2.5 V             :         : 3         : N              
+gpio_i[2]                    : AE16      : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[17]                 : AE17      : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[4]                  : AE18      : input  : 2.5 V             :         : 4         : N              
+gpio_o[34]                   : AE19      : output : 2.5 V             :         : 4         : N              
+pwm_o[0]                     : AE20      : output : 2.5 V             :         : 4         : N              
+cfs_in_i[26]                 : AE21      : input  : 2.5 V             :         : 4         : N              
+gpio_i[57]                   : AE22      : input  : 2.5 V             :         : 4         : N              
+wb_ack_i                     : AE23      : input  : 2.5 V             :         : 4         : N              
+xirq_i[16]                   : AE24      : input  : 2.5 V             :         : 4         : N              
+wb_dat_i[6]                  : AE25      : input  : 2.5 V             :         : 5         : N              
+wb_dat_i[4]                  : AE26      : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
+wb_adr_o[10]                 : AE28      : output : 2.5 V             :         : 5         : N              
+cfs_out_o[11]                : AE29      : output : 2.5 V             :         : 5         : N              
+uart1_rxd_i                  : AE30      : input  : 2.5 V             :         : 5         : N              
 GND                          : AF1       : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF3       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3         :                
+xirq_i[24]                   : AF3       : input  : 2.5 V             :         : 3         : N              
+cfs_in_i[21]                 : AF4       : input  : 2.5 V             :         : 3         : N              
 GND                          : AF5       : gnd    :                   :         :           :                
-jtag_tms_i                   : AF6       : input  : 2.5 V             :         : 3         : N              
-cfs_out_o[29]                : AF7       : output : 2.5 V             :         : 3         : N              
+xirq_i[5]                    : AF6       : input  : 2.5 V             :         : 3         : N              
+xirq_i[11]                   : AF7       : input  : 2.5 V             :         : 3         : N              
 GND                          : AF8       : gnd    :                   :         :           :                
-wb_adr_o[25]                 : AF9       : output : 2.5 V             :         : 3         : N              
-cfs_out_o[21]                : AF10      : output : 2.5 V             :         : 3         : N              
+gpio_o[23]                   : AF9       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3         :                
 GND                          : AF11      : gnd    :                   :         :           :                
-cfs_in_i[6]                  : AF12      : input  : 2.5 V             :         : 3         : N              
-cfs_out_o[7]                 : AF13      : output : 2.5 V             :         : 3         : N              
+wb_dat_i[21]                 : AF12      : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[6]                  : AF13      : output : 2.5 V             :         : 3         : N              
 GND                          : AF14      : gnd    :                   :         :           :                
-xirq_i[13]                   : AF15      : input  : 2.5 V             :         : 3         : N              
-sdi_clk_i                    : AF16      : input  : 2.5 V             :         : 4         : N              
+sdi_clk_i                    : AF15      : input  : 2.5 V             :         : 3         : N              
+cfs_out_o[6]                 : AF16      : output : 2.5 V             :         : 4         : N              
 GND                          : AF17      : gnd    :                   :         :           :                
-cfs_out_o[24]                : AF18      : output : 2.5 V             :         : 4         : N              
-gpio_i[6]                    : AF19      : input  : 2.5 V             :         : 4         : N              
+gpio_i[49]                   : AF18      : input  : 2.5 V             :         : 4         : N              
+wb_dat_o[24]                 : AF19      : output : 2.5 V             :         : 4         : N              
 GND                          : AF20      : gnd    :                   :         :           :                
-uart0_rxd_i                  : AF21      : input  : 2.5 V             :         : 4         : N              
-cfs_out_o[11]                : AF22      : output : 2.5 V             :         : 4         : N              
+xirq_i[15]                   : AF21      : input  : 2.5 V             :         : 4         : N              
+pwm_o[2]                     : AF22      : output : 2.5 V             :         : 4         : N              
 GND                          : AF23      : gnd    :                   :         :           :                
-gpio_o[19]                   : AF24      : output : 2.5 V             :         : 4         : N              
-cfs_in_i[26]                 : AF25      : input  : 2.5 V             :         : 4         : N              
+wb_adr_o[7]                  : AF24      : output : 2.5 V             :         : 4         : N              
+gpio_o[29]                   : AF25      : output : 2.5 V             :         : 4         : N              
 GND                          : AF26      : gnd    :                   :         :           :                
-wb_dat_o[10]                 : AF27      : output : 2.5 V             :         : 5         : N              
+wb_dat_o[29]                 : AF27      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF28      :        :                   :         : 5         :                
 GND                          : AF29      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF30      :        :                   :         : 5         :                
+wb_stb_o                     : AF30      : output : 2.5 V             :         : 5         : N              
 NC                           : AG1       :        :                   :         :           :                
 GND                          : AG2       : gnd    :                   :         :           :                
-cfs_out_o[1]                 : AG3       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG4       :        :                   :         : 3         :                
-cfs_out_o[25]                : AG5       : output : 2.5 V             :         : 3         : N              
-twi_scl_i                    : AG6       : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG7       :        :                   :         : 3         :                
-gpio_i[46]                   : AG8       : input  : 2.5 V             :         : 3         : N              
-wb_dat_o[0]                  : AG9       : output : 2.5 V             :         : 3         : N              
-gpio_o[36]                   : AG10      : output : 2.5 V             :         : 3         : N              
-twi_scl_o                    : AG11      : output : 2.5 V             :         : 3         : N              
-gpio_o[11]                   : AG12      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 3         :                
-pwm_o[8]                     : AG14      : output : 2.5 V             :         : 3         : N              
-gpio_i[24]                   : AG15      : input  : 2.5 V             :         : 3         : N              
-gpio_o[26]                   : AG16      : output : 2.5 V             :         : 4         : N              
-cfs_out_o[20]                : AG17      : output : 2.5 V             :         : 4         : N              
-gpio_i[5]                    : AG18      : input  : 2.5 V             :         : 4         : N              
-mext_irq_i                   : AG19      : input  : 2.5 V             :         : 4         : N              
-xirq_i[10]                   : AG20      : input  : 2.5 V             :         : 4         : N              
-xip_dat_i                    : AG21      : input  : 2.5 V             :         : 4         : N              
-cfs_in_i[25]                 : AG22      : input  : 2.5 V             :         : 4         : N              
-xirq_i[11]                   : AG23      : input  : 2.5 V             :         : 4         : N              
-gpio_i[20]                   : AG24      : input  : 2.5 V             :         : 4         : N              
-wb_dat_i[11]                 : AG25      : input  : 2.5 V             :         : 4         : N              
-gpio_i[40]                   : AG26      : input  : 2.5 V             :         : 4         : N              
-wb_dat_i[25]                 : AG27      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 4         :                
-wb_dat_o[26]                 : AG29      : output : 2.5 V             :         : 5         : N              
-wb_dat_i[18]                 : AG30      : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3         :                
+wb_adr_o[29]                 : AG4       : output : 2.5 V             :         : 3         : N              
+wb_adr_o[24]                 : AG5       : output : 2.5 V             :         : 3         : N              
+cfs_in_i[7]                  : AG6       : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[1]                  : AG7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG9       :        :                   :         : 3         :                
+wb_dat_i[5]                  : AG10      : input  : 2.5 V             :         : 3         : N              
+cfs_out_o[21]                : AG11      : output : 2.5 V             :         : 3         : N              
+pwm_o[9]                     : AG12      : output : 2.5 V             :         : 3         : N              
+gpio_o[60]                   : AG13      : output : 2.5 V             :         : 3         : N              
+wb_dat_i[18]                 : AG14      : input  : 2.5 V             :         : 3         : N              
+wb_sel_o[3]                  : AG15      : output : 2.5 V             :         : 3         : N              
+gpio_o[43]                   : AG16      : output : 2.5 V             :         : 4         : N              
+cfs_out_o[14]                : AG17      : output : 2.5 V             :         : 4         : N              
+xirq_i[27]                   : AG18      : input  : 2.5 V             :         : 4         : N              
+wb_dat_i[29]                 : AG19      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG20      :        :                   :         : 4         :                
+cfs_in_i[29]                 : AG21      : input  : 2.5 V             :         : 4         : N              
+wb_adr_o[25]                 : AG22      : output : 2.5 V             :         : 4         : N              
+uart1_cts_i                  : AG23      : input  : 2.5 V             :         : 4         : N              
+spi_csn_o[5]                 : AG24      : output : 2.5 V             :         : 4         : N              
+sdi_dat_o                    : AG25      : output : 2.5 V             :         : 4         : N              
+gpio_i[62]                   : AG26      : input  : 2.5 V             :         : 4         : N              
+wb_adr_o[3]                  : AG27      : output : 2.5 V             :         : 4         : N              
+gpio_i[11]                   : AG28      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG29      :        :                   :         : 5         :                
+sdi_csn_i                    : AG30      : input  : 2.5 V             :         : 5         : N              
 NC                           : AH1       :        :                   :         :           :                
-wb_dat_o[15]                 : AH2       : output : 2.5 V             :         : 3         : N              
-xirq_i[22]                   : AH3       : input  : 2.5 V             :         : 3         : N              
-wb_adr_o[14]                 : AH4       : output : 2.5 V             :         : 3         : N              
-gpio_o[34]                   : AH5       : output : 2.5 V             :         : 3         : N              
-xirq_i[6]                    : AH6       : input  : 2.5 V             :         : 3         : N              
-gpio_o[52]                   : AH7       : output : 2.5 V             :         : 3         : N              
-gpio_i[61]                   : AH8       : input  : 2.5 V             :         : 3         : N              
-gpio_o[14]                   : AH9       : output : 2.5 V             :         : 3         : N              
-wb_dat_i[17]                 : AH10      : input  : 2.5 V             :         : 3         : N              
-pwm_o[10]                    : AH11      : output : 2.5 V             :         : 3         : N              
-gpio_o[40]                   : AH12      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH13      :        :                   :         : 3         :                
-wb_dat_i[20]                 : AH14      : input  : 2.5 V             :         : 3         : N              
-wb_dat_o[1]                  : AH15      : output : 2.5 V             :         : 3         : N              
-xip_dat_o                    : AH16      : output : 2.5 V             :         : 3         : N              
-gpio_i[0]                    : AH17      : input  : 2.5 V             :         : 4         : N              
-fence_o                      : AH18      : output : 2.5 V             :         : 4         : N              
-gpio_o[37]                   : AH19      : output : 2.5 V             :         : 4         : N              
-gpio_o[56]                   : AH20      : output : 2.5 V             :         : 4         : N              
-cfs_out_o[16]                : AH21      : output : 2.5 V             :         : 4         : N              
-wb_dat_i[24]                 : AH22      : input  : 2.5 V             :         : 4         : N              
-gpio_i[17]                   : AH23      : input  : 2.5 V             :         : 4         : N              
-pwm_o[2]                     : AH24      : output : 2.5 V             :         : 4         : N              
-pwm_o[1]                     : AH25      : output : 2.5 V             :         : 4         : N              
-cfs_out_o[22]                : AH26      : output : 2.5 V             :         : 4         : N              
-cfs_out_o[31]                : AH27      : output : 2.5 V             :         : 4         : N              
-wb_adr_o[4]                  : AH28      : output : 2.5 V             :         : 4         : N              
-wb_dat_o[18]                 : AH29      : output : 2.5 V             :         : 5         : N              
-cfs_in_i[21]                 : AH30      : input  : 2.5 V             :         : 5         : N              
+gpio_o[35]                   : AH2       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :         : 3         :                
+gpio_o[54]                   : AH4       : output : 2.5 V             :         : 3         : N              
+xirq_i[25]                   : AH5       : input  : 2.5 V             :         : 3         : N              
+gpio_i[16]                   : AH6       : input  : 2.5 V             :         : 3         : N              
+gpio_i[39]                   : AH7       : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 3         :                
+cfs_out_o[2]                 : AH10      : output : 2.5 V             :         : 3         : N              
+gpio_o[13]                   : AH11      : output : 2.5 V             :         : 3         : N              
+gpio_i[9]                    : AH12      : input  : 2.5 V             :         : 3         : N              
+gpio_i[59]                   : AH13      : input  : 2.5 V             :         : 3         : N              
+wb_dat_o[19]                 : AH14      : output : 2.5 V             :         : 3         : N              
+wb_dat_o[27]                 : AH15      : output : 2.5 V             :         : 3         : N              
+gpio_i[30]                   : AH16      : input  : 2.5 V             :         : 3         : N              
+wb_adr_o[30]                 : AH17      : output : 2.5 V             :         : 4         : N              
+cfs_in_i[25]                 : AH18      : input  : 2.5 V             :         : 4         : N              
+gpio_i[22]                   : AH19      : input  : 2.5 V             :         : 4         : N              
+wb_dat_i[28]                 : AH20      : input  : 2.5 V             :         : 4         : N              
+cfs_out_o[26]                : AH21      : output : 2.5 V             :         : 4         : N              
+xirq_i[6]                    : AH22      : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[3]                  : AH23      : input  : 2.5 V             :         : 4         : N              
+wb_adr_o[9]                  : AH24      : output : 2.5 V             :         : 4         : N              
+gpio_o[10]                   : AH25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
+cfs_in_i[24]                 : AH27      : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[13]                 : AH28      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH29      :        :                   :         : 5         :                
+spi_csn_o[6]                 : AH30      : output : 2.5 V             :         : 5         : N              
 nSTATUS                      : AJ1       :        :                   :         : 3         :                
 GND                          : AJ2       : gnd    :                   :         :           :                
-cfs_in_i[9]                  : AJ3       : input  : 2.5 V             :         : 3         : N              
-cfs_out_o[27]                : AJ4       : output : 2.5 V             :         : 3         : N              
+cfs_in_i[31]                 : AJ3       : input  : 2.5 V             :         : 3         : N              
+wb_dat_o[16]                 : AJ4       : output : 2.5 V             :         : 3         : N              
 GND                          : AJ5       : gnd    :                   :         :           :                
-cfs_in_i[22]                 : AJ6       : input  : 2.5 V             :         : 3         : N              
-wb_adr_o[17]                 : AJ7       : output : 2.5 V             :         : 3         : N              
+gpio_o[26]                   : AJ6       : output : 2.5 V             :         : 3         : N              
+spi_csn_o[4]                 : AJ7       : output : 2.5 V             :         : 3         : N              
 GND                          : AJ8       : gnd    :                   :         :           :                
-cfs_in_i[12]                 : AJ9       : input  : 2.5 V             :         : 3         : N              
-cfs_in_i[4]                  : AJ10      : input  : 2.5 V             :         : 3         : N              
+cfs_out_o[30]                : AJ9       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ10      :        :                   :         : 3         :                
 GND                          : AJ11      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ12      :        :                   :         : 3         :                
-wb_dat_o[4]                  : AJ13      : output : 2.5 V             :         : 3         : N              
+wb_dat_i[0]                  : AJ12      : input  : 2.5 V             :         : 3         : N              
+cfs_in_i[6]                  : AJ13      : input  : 2.5 V             :         : 3         : N              
 GND                          : AJ14      : gnd    :                   :         :           :                
-wb_adr_o[19]                 : AJ15      : output : 2.5 V             :         : 4         : N              
+twi_sda_i                    : AJ15      : input  : 2.5 V             :         : 4         : N              
 clk_i                        : AJ16      : input  : 2.5 V             :         : 4         : Y              
 GND                          : AJ17      : gnd    :                   :         :           :                
-gpio_i[34]                   : AJ18      : input  : 2.5 V             :         : 4         : N              
-gpio_i[3]                    : AJ19      : input  : 2.5 V             :         : 4         : N              
+gpio_o[32]                   : AJ18      : output : 2.5 V             :         : 4         : N              
+wb_dat_o[15]                 : AJ19      : output : 2.5 V             :         : 4         : N              
 GND                          : AJ20      : gnd    :                   :         :           :                
-gpio_i[37]                   : AJ21      : input  : 2.5 V             :         : 4         : N              
-wb_adr_o[28]                 : AJ22      : output : 2.5 V             :         : 4         : N              
+gpio_o[39]                   : AJ21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4         :                
 GND                          : AJ23      : gnd    :                   :         :           :                
-gpio_o[57]                   : AJ24      : output : 2.5 V             :         : 4         : N              
-wb_dat_i[4]                  : AJ25      : input  : 2.5 V             :         : 4         : N              
+xirq_i[9]                    : AJ24      : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[14]                 : AJ25      : input  : 2.5 V             :         : 4         : N              
 GND                          : AJ26      : gnd    :                   :         :           :                
-spi_csn_o[7]                 : AJ27      : output : 2.5 V             :         : 4         : N              
-wb_dat_o[29]                 : AJ28      : output : 2.5 V             :         : 4         : N              
+xirq_i[8]                    : AJ27      : input  : 2.5 V             :         : 4         : N              
+gpio_i[21]                   : AJ28      : input  : 2.5 V             :         : 4         : N              
 GND                          : AJ29      : gnd    :                   :         :           :                
-gpio_o[39]                   : AJ30      : output : 2.5 V             :         : 5         : N              
+gpio_o[30]                   : AJ30      : output : 2.5 V             :         : 5         : N              
 NC                           : AK2       :        :                   :         :           :                
-xirq_i[8]                    : AK3       : input  : 2.5 V             :         : 3         : N              
-xirq_i[0]                    : AK4       : input  : 2.5 V             :         : 3         : N              
-cfs_out_o[19]                : AK5       : output : 2.5 V             :         : 3         : N              
-xirq_i[9]                    : AK6       : input  : 2.5 V             :         : 3         : N              
-wb_dat_o[16]                 : AK7       : output : 2.5 V             :         : 3         : N              
-gpio_i[59]                   : AK8       : input  : 2.5 V             :         : 3         : N              
-wb_dat_i[1]                  : AK9       : input  : 2.5 V             :         : 3         : N              
-neoled_o                     : AK10      : output : 2.5 V             :         : 3         : N              
-wb_tag_o[1]                  : AK11      : output : 2.5 V             :         : 3         : N              
-uart1_rts_o                  : AK12      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK13      :        :                   :         : 3         :                
-xirq_i[21]                   : AK14      : input  : 2.5 V             :         : 3         : N              
-wb_dat_i[29]                 : AK15      : input  : 2.5 V             :         : 4         : N              
-GND+                         : AK16      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK17      :        :                   :         : 4         :                
-gpio_i[2]                    : AK18      : input  : 2.5 V             :         : 4         : N              
-gpio_i[1]                    : AK19      : input  : 2.5 V             :         : 4         : N              
-msw_irq_i                    : AK20      : input  : 2.5 V             :         : 4         : N              
-wb_adr_o[7]                  : AK21      : output : 2.5 V             :         : 4         : N              
-uart1_cts_i                  : AK22      : input  : 2.5 V             :         : 4         : N              
-cfs_in_i[0]                  : AK23      : input  : 2.5 V             :         : 4         : N              
-gpio_o[18]                   : AK24      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK25      :        :                   :         : 4         :                
-wb_adr_o[0]                  : AK26      : output : 2.5 V             :         : 4         : N              
-xirq_i[27]                   : AK27      : input  : 2.5 V             :         : 4         : N              
-cfs_in_i[28]                 : AK28      : input  : 2.5 V             :         : 4         : N              
-cfs_out_o[26]                : AK29      : output : 2.5 V             :         : 4         : N              
+gpio_i[56]                   : AK3       : input  : 2.5 V             :         : 3         : N              
+pwm_o[7]                     : AK4       : output : 2.5 V             :         : 3         : N              
+wb_dat_o[7]                  : AK5       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK6       :        :                   :         : 3         :                
+wb_dat_i[22]                 : AK7       : input  : 2.5 V             :         : 3         : N              
+gpio_i[23]                   : AK8       : input  : 2.5 V             :         : 3         : N              
+spi_csn_o[2]                 : AK9       : output : 2.5 V             :         : 3         : N              
+gpio_o[11]                   : AK10      : output : 2.5 V             :         : 3         : N              
+wb_adr_o[26]                 : AK11      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK12      :        :                   :         : 3         :                
+gpio_o[19]                   : AK13      : output : 2.5 V             :         : 3         : N              
+gpio_o[37]                   : AK14      : output : 2.5 V             :         : 3         : N              
+gpio_i[3]                    : AK15      : input  : 2.5 V             :         : 4         : N              
+gpio_i[46]                   : AK16      : input  : 2.5 V             :         : 4         : N              
+wb_dat_o[30]                 : AK17      : output : 2.5 V             :         : 4         : N              
+wb_dat_o[1]                  : AK18      : output : 2.5 V             :         : 4         : N              
+wb_adr_o[5]                  : AK19      : output : 2.5 V             :         : 4         : N              
+wb_dat_o[28]                 : AK20      : output : 2.5 V             :         : 4         : N              
+wb_dat_o[6]                  : AK21      : output : 2.5 V             :         : 4         : N              
+cfs_out_o[5]                 : AK22      : output : 2.5 V             :         : 4         : N              
+gpio_o[57]                   : AK23      : output : 2.5 V             :         : 4         : N              
+gpio_o[55]                   : AK24      : output : 2.5 V             :         : 4         : N              
+gpio_i[12]                   : AK25      : input  : 2.5 V             :         : 4         : N              
+gpio_i[52]                   : AK26      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK27      :        :                   :         : 4         :                
+xirq_i[18]                   : AK28      : input  : 2.5 V             :         : 4         : N              
+wb_cyc_o                     : AK29      : output : 2.5 V             :         : 4         : N              
 nCONFIG                      : B1        :        :                   :         : 9         :                
 GND                          : B2        : gnd    :                   :         :           :                
 ~ALTERA_DCLK~                : B3        : output : 2.5 V             :         : 9         : Y              
 ~ALTERA_NCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : B4        : input  : 2.5 V             :         : 9         : N              
 GND                          : B5        : gnd    :                   :         :           :                
-gpio_i[21]                   : B6        : input  : 2.5 V             :         : 8         : N              
-cfs_in_i[13]                 : B7        : input  : 2.5 V             :         : 8         : N              
+gpio_o[42]                   : B6        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 GND                          : B8        : gnd    :                   :         :           :                
-gpio_o[42]                   : B9        : output : 2.5 V             :         : 8         : N              
-pwm_o[7]                     : B10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 8         :                
 GND                          : B11       : gnd    :                   :         :           :                
-wb_dat_o[22]                 : B12       : output : 2.5 V             :         : 8         : N              
-wb_adr_o[23]                 : B13       : output : 2.5 V             :         : 8         : N              
+xip_csn_o                    : B12       : output : 2.5 V             :         : 8         : N              
+spi_dat_o                    : B13       : output : 2.5 V             :         : 8         : N              
 GND                          : B14       : gnd    :                   :         :           :                
-GND+                         : B15       :        :                   :         : 7         :                
-gpio_i[60]                   : B16       : input  : 2.5 V             :         : 7         : N              
+gpio_i[42]                   : B15       : input  : 2.5 V             :         : 7         : N              
+gpio_i[6]                    : B16       : input  : 2.5 V             :         : 7         : N              
 GND                          : B17       : gnd    :                   :         :           :                
-xip_csn_o                    : B18       : output : 2.5 V             :         : 7         : N              
-jtag_tck_i                   : B19       : input  : 2.5 V             :         : 7         : N              
+xip_dat_i                    : B18       : input  : 2.5 V             :         : 7         : N              
+cfs_in_i[20]                 : B19       : input  : 2.5 V             :         : 7         : N              
 GND                          : B20       : gnd    :                   :         :           :                
-spi_clk_o                    : B21       : output : 2.5 V             :         : 7         : N              
-gpio_i[14]                   : B22       : input  : 2.5 V             :         : 7         : N              
+cfs_in_i[1]                  : B21       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 7         :                
 GND                          : B23       : gnd    :                   :         :           :                
-gpio_i[13]                   : B24       : input  : 2.5 V             :         : 7         : N              
-xirq_i[2]                    : B25       : input  : 2.5 V             :         : 7         : N              
+gpio_i[29]                   : B24       : input  : 2.5 V             :         : 7         : N              
+cfs_out_o[31]                : B25       : output : 2.5 V             :         : 7         : N              
 GND                          : B26       : gnd    :                   :         :           :                
-cfs_in_i[27]                 : B27       : input  : 2.5 V             :         : 7         : N              
-jtag_tdi_i                   : B28       : input  : 2.5 V             :         : 7         : N              
+uart0_rxd_i                  : B27       : input  : 2.5 V             :         : 7         : Y              
+gpio_o[14]                   : B28       : output : 2.5 V             :         : 7         : N              
 GND                          : B29       : gnd    :                   :         :           :                
-gpio_i[44]                   : B30       : input  : 2.5 V             :         : 7         : N              
+cfs_out_o[9]                 : B30       : output : 2.5 V             :         : 7         : N              
 nCE                          : C1        :        :                   :         : 9         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 8         :                
-pwm_o[4]                     : C3        : output : 2.5 V             :         : 8         : N              
-wb_dat_i[28]                 : C4        : input  : 2.5 V             :         : 8         : N              
-xirq_i[17]                   : C5        : input  : 2.5 V             :         : 8         : N              
-gpio_o[35]                   : C6        : output : 2.5 V             :         : 8         : N              
-gpio_o[43]                   : C7        : output : 2.5 V             :         : 8         : N              
-gpio_i[11]                   : C8        : input  : 2.5 V             :         : 8         : N              
-wb_dat_i[15]                 : C9        : input  : 2.5 V             :         : 8         : N              
-cfs_in_i[11]                 : C10       : input  : 2.5 V             :         : 8         : N              
-spi_csn_o[1]                 : C11       : output : 2.5 V             :         : 8         : N              
-pwm_o[11]                    : C12       : output : 2.5 V             :         : 8         : N              
+wb_we_o                      : C2        : output : 2.5 V             :         : 8         : N              
+cfs_out_o[8]                 : C3        : output : 2.5 V             :         : 8         : N              
+wb_dat_o[10]                 : C4        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
+gpio_i[31]                   : C6        : input  : 2.5 V             :         : 8         : N              
+xirq_i[12]                   : C7        : input  : 2.5 V             :         : 8         : N              
+cfs_out_o[20]                : C8        : output : 2.5 V             :         : 8         : N              
+jtag_tdi_i                   : C9        : input  : 2.5 V             :         : 8         : N              
+wb_err_i                     : C10       : input  : 2.5 V             :         : 8         : N              
+wb_adr_o[8]                  : C11       : output : 2.5 V             :         : 8         : N              
+gpio_i[8]                    : C12       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 8         :                
-wb_dat_i[3]                  : C14       : input  : 2.5 V             :         : 8         : N              
-cfs_out_o[10]                : C15       : output : 2.5 V             :         : 8         : N              
-twi_sda_o                    : C16       : output : 2.5 V             :         : 8         : N              
-xirq_i[14]                   : C17       : input  : 2.5 V             :         : 7         : N              
-gpio_i[38]                   : C18       : input  : 2.5 V             :         : 7         : N              
-gpio_o[12]                   : C19       : output : 2.5 V             :         : 7         : N              
-xirq_i[28]                   : C20       : input  : 2.5 V             :         : 7         : N              
-cfs_out_o[3]                 : C21       : output : 2.5 V             :         : 7         : N              
-cfs_out_o[13]                : C22       : output : 2.5 V             :         : 7         : N              
-wb_adr_o[26]                 : C23       : output : 2.5 V             :         : 7         : N              
-xirq_i[29]                   : C24       : input  : 2.5 V             :         : 7         : N              
-gpio_o[62]                   : C25       : output : 2.5 V             :         : 7         : N              
-wb_dat_o[28]                 : C26       : output : 2.5 V             :         : 7         : N              
-gpio_i[25]                   : C27       : input  : 2.5 V             :         : 7         : N              
-wb_dat_o[17]                 : C28       : output : 2.5 V             :         : 7         : N              
-wb_dat_o[8]                  : C29       : output : 2.5 V             :         : 6         : N              
-spi_csn_o[3]                 : C30       : output : 2.5 V             :         : 6         : N              
-cfs_in_i[20]                 : D1        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 8         :                
+wb_dat_i[26]                 : C15       : input  : 2.5 V             :         : 8         : N              
+wb_dat_o[20]                 : C16       : output : 2.5 V             :         : 8         : N              
+msw_irq_i                    : C17       : input  : 2.5 V             :         : 7         : N              
+wb_dat_o[8]                  : C18       : output : 2.5 V             :         : 7         : N              
+cfs_out_o[29]                : C19       : output : 2.5 V             :         : 7         : N              
+wb_adr_o[4]                  : C20       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 7         :                
+cfs_in_i[27]                 : C22       : input  : 2.5 V             :         : 7         : N              
+xip_clk_o                    : C23       : output : 2.5 V             :         : 7         : N              
+gpio_i[33]                   : C24       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C25       :        :                   :         : 7         :                
+cfs_out_o[19]                : C26       : output : 2.5 V             :         : 7         : N              
+wb_dat_i[12]                 : C27       : input  : 2.5 V             :         : 7         : N              
+twi_sda_o                    : C28       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C29       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C30       :        :                   :         : 6         :                
+wb_dat_i[27]                 : D1        : input  : 2.5 V             :         : 8         : N              
 GND                          : D2        : gnd    :                   :         :           :                
-xirq_i[23]                   : D3        : input  : 2.5 V             :         : 8         : N              
-uart0_txd_o                  : D4        : output : 2.5 V             :         : 8         : N              
-wb_adr_o[15]                 : D5        : output : 2.5 V             :         : 8         : N              
-cfs_in_i[23]                 : D6        : input  : 2.5 V             :         : 8         : N              
-cfs_out_o[6]                 : D7        : output : 2.5 V             :         : 8         : N              
-wb_adr_o[8]                  : D8        : output : 2.5 V             :         : 8         : N              
-gpio_o[44]                   : D9        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
-gpio_o[22]                   : D11       : output : 2.5 V             :         : 8         : N              
-gpio_i[42]                   : D12       : input  : 2.5 V             :         : 8         : N              
-uart0_rts_o                  : D13       : output : 2.5 V             :         : 8         : N              
-wb_adr_o[22]                 : D14       : output : 2.5 V             :         : 8         : N              
-pwm_o[5]                     : D15       : output : 2.5 V             :         : 8         : N              
-uart1_txd_o                  : D16       : output : 2.5 V             :         : 8         : N              
-wb_dat_i[0]                  : D17       : input  : 2.5 V             :         : 7         : N              
-wb_adr_o[30]                 : D18       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7         :                
-pwm_o[3]                     : D20       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7         :                
-fencei_o                     : D22       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D23       :        :                   :         : 7         :                
-wb_adr_o[2]                  : D24       : output : 2.5 V             :         : 7         : N              
-wb_cyc_o                     : D25       : output : 2.5 V             :         : 7         : N              
-xirq_i[24]                   : D26       : input  : 2.5 V             :         : 7         : N              
-gpio_i[15]                   : D27       : input  : 2.5 V             :         : 7         : N              
-gpio_o[41]                   : D28       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D29       :        :                   :         : 6         :                
-pwm_o[6]                     : D30       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[17]                 : D3        : output : 2.5 V             :         : 8         : N              
+cfs_out_o[12]                : D4        : output : 2.5 V             :         : 8         : N              
+wb_dat_i[30]                 : D5        : input  : 2.5 V             :         : 8         : N              
+xirq_i[23]                   : D6        : input  : 2.5 V             :         : 8         : N              
+xirq_i[4]                    : D7        : input  : 2.5 V             :         : 8         : N              
+gpio_i[19]                   : D8        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
+gpio_i[45]                   : D10       : input  : 2.5 V             :         : 8         : N              
+gpio_i[34]                   : D11       : input  : 2.5 V             :         : 8         : N              
+gpio_i[50]                   : D12       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 8         :                
+twi_scl_i                    : D14       : input  : 2.5 V             :         : 8         : N              
+wb_sel_o[2]                  : D15       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 8         :                
+gpio_i[7]                    : D17       : input  : 2.5 V             :         : 7         : N              
+wb_dat_o[31]                 : D18       : output : 2.5 V             :         : 7         : N              
+gpio_o[59]                   : D19       : output : 2.5 V             :         : 7         : N              
+wb_dat_i[13]                 : D20       : input  : 2.5 V             :         : 7         : N              
+jtag_tms_i                   : D21       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 7         :                
+cfs_out_o[25]                : D23       : output : 2.5 V             :         : 7         : N              
+gpio_i[24]                   : D24       : input  : 2.5 V             :         : 7         : N              
+wb_dat_o[25]                 : D25       : output : 2.5 V             :         : 7         : N              
+uart0_cts_i                  : D26       : input  : 2.5 V             :         : 7         : Y              
+uart1_rts_o                  : D27       : output : 2.5 V             :         : 7         : N              
+gpio_o[52]                   : D28       : output : 2.5 V             :         : 7         : N              
+cfs_out_o[15]                : D29       : output : 2.5 V             :         : 6         : N              
+gpio_o[49]                   : D30       : output : 2.5 V             :         : 6         : N              
 TMS                          : E1        : input  :                   :         : 9         :                
 TDI                          : E2        : input  :                   :         : 9         :                
-gpio_i[62]                   : E3        : input  : 2.5 V             :         : 8         : N              
-gpio_o[24]                   : E4        : output : 2.5 V             :         : 8         : N              
+gpio_o[41]                   : E3        : output : 2.5 V             :         : 8         : N              
+wb_dat_i[1]                  : E4        : input  : 2.5 V             :         : 8         : N              
 GND                          : E5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
-gpio_i[10]                   : E7        : input  : 2.5 V             :         : 8         : N              
+gpio_o[33]                   : E6        : output : 2.5 V             :         : 8         : N              
+wb_dat_i[31]                 : E7        : input  : 2.5 V             :         : 8         : N              
 GND                          : E8        : gnd    :                   :         :           :                
-wb_dat_o[7]                  : E9        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+jtag_tdo_o                   : E9        : output : 2.5 V             :         : 8         : N              
+wb_adr_o[2]                  : E10       : output : 2.5 V             :         : 8         : N              
 GND                          : E11       : gnd    :                   :         :           :                
-wb_dat_o[12]                 : E12       : output : 2.5 V             :         : 8         : N              
-wb_dat_i[27]                 : E13       : input  : 2.5 V             :         : 8         : N              
+wb_adr_o[13]                 : E12       : output : 2.5 V             :         : 8         : N              
+onewire_i                    : E13       : input  : 2.5 V             :         : 8         : N              
 GND                          : E14       : gnd    :                   :         :           :                
-gpio_o[33]                   : E15       : output : 2.5 V             :         : 8         : N              
-wb_adr_o[11]                 : E16       : output : 2.5 V             :         : 8         : N              
+gpio_i[25]                   : E15       : input  : 2.5 V             :         : 8         : N              
+sdi_dat_i                    : E16       : input  : 2.5 V             :         : 8         : N              
 GND                          : E17       : gnd    :                   :         :           :                
-cfs_out_o[23]                : E18       : output : 2.5 V             :         : 7         : N              
-spi_dat_o                    : E19       : output : 2.5 V             :         : 7         : N              
+gpio_o[61]                   : E18       : output : 2.5 V             :         : 7         : N              
+wb_dat_i[19]                 : E19       : input  : 2.5 V             :         : 7         : N              
 GND                          : E20       : gnd    :                   :         :           :                
-wb_dat_i[7]                  : E21       : input  : 2.5 V             :         : 7         : N              
-wb_dat_i[30]                 : E22       : input  : 2.5 V             :         : 7         : N              
+spi_csn_o[0]                 : E21       : output : 2.5 V             :         : 7         : N              
+cfs_out_o[3]                 : E22       : output : 2.5 V             :         : 7         : N              
 GND                          : E23       : gnd    :                   :         :           :                
-sdi_dat_i                    : E24       : input  : 2.5 V             :         : 7         : N              
-gpio_o[51]                   : E25       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E24       :        :                   :         : 7         :                
+gpio_o[45]                   : E25       : output : 2.5 V             :         : 7         : N              
 GND                          : E26       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :         : 6         :                
-gpio_i[54]                   : E28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E28       :        :                   :         : 6         :                
 GND                          : E29       : gnd    :                   :         :           :                
-gpio_o[13]                   : E30       : output : 2.5 V             :         : 6         : N              
+xirq_i[7]                    : E30       : input  : 2.5 V             :         : 6         : N              
 TDO                          : F1        : output :                   :         : 9         :                
 TCK                          : F2        : input  :                   :         : 9         :                
 GND                          : F3        : gnd    :                   :         :           :                
-cfs_in_i[10]                 : F4        : input  : 2.5 V             :         : 8         : N              
-wb_dat_o[27]                 : F5        : output : 2.5 V             :         : 8         : N              
-gpio_i[26]                   : F6        : input  : 2.5 V             :         : 8         : N              
-wb_dat_i[19]                 : F7        : input  : 2.5 V             :         : 8         : N              
-pwm_o[9]                     : F8        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8         :                
-cfs_out_o[4]                 : F10       : output : 2.5 V             :         : 8         : N              
-wb_adr_o[10]                 : F11       : output : 2.5 V             :         : 8         : N              
-gpio_o[16]                   : F12       : output : 2.5 V             :         : 8         : N              
-xirq_i[31]                   : F13       : input  : 2.5 V             :         : 8         : N              
-gpio_i[45]                   : F14       : input  : 2.5 V             :         : 8         : N              
-xirq_i[16]                   : F15       : input  : 2.5 V             :         : 8         : N              
-gpio_o[17]                   : F16       : output : 2.5 V             :         : 8         : N              
+wb_sel_o[0]                  : F4        : output : 2.5 V             :         : 8         : N              
+spi_dat_i                    : F5        : input  : 2.5 V             :         : 8         : N              
+cfs_in_i[19]                 : F6        : input  : 2.5 V             :         : 8         : N              
+cfs_out_o[13]                : F7        : output : 2.5 V             :         : 8         : N              
+pwm_o[11]                    : F8        : output : 2.5 V             :         : 8         : N              
+gpio_o[62]                   : F9        : output : 2.5 V             :         : 8         : N              
+gpio_i[17]                   : F10       : input  : 2.5 V             :         : 8         : N              
+cfs_out_o[23]                : F11       : output : 2.5 V             :         : 8         : N              
+wb_dat_i[7]                  : F12       : input  : 2.5 V             :         : 8         : N              
+wb_dat_o[3]                  : F13       : output : 2.5 V             :         : 8         : N              
+xirq_i[21]                   : F14       : input  : 2.5 V             :         : 8         : N              
+gpio_i[63]                   : F15       : input  : 2.5 V             :         : 8         : N              
+gpio_i[1]                    : F16       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 7         :                
-wb_dat_i[2]                  : F18       : input  : 2.5 V             :         : 7         : N              
-gpio_i[22]                   : F19       : input  : 2.5 V             :         : 7         : N              
-wb_sel_o[1]                  : F20       : output : 2.5 V             :         : 7         : N              
-gpio_o[53]                   : F21       : output : 2.5 V             :         : 7         : N              
-wb_dat_i[21]                 : F22       : input  : 2.5 V             :         : 7         : N              
-wb_tag_o[2]                  : F23       : output : 2.5 V             :         : 7         : N              
-wb_dat_o[23]                 : F24       : output : 2.5 V             :         : 7         : N              
-cfs_in_i[18]                 : F25       : input  : 2.5 V             :         : 7         : N              
-wb_adr_o[18]                 : F26       : output : 2.5 V             :         : 6         : N              
-wb_stb_o                     : F27       : output : 2.5 V             :         : 6         : N              
-xip_clk_o                    : F28       : output : 2.5 V             :         : 6         : N              
-gpio_i[35]                   : F29       : input  : 2.5 V             :         : 6         : N              
-uart1_rxd_i                  : F30       : input  : 2.5 V             :         : 6         : N              
+wb_dat_o[14]                 : F18       : output : 2.5 V             :         : 7         : N              
+gpio_o[58]                   : F19       : output : 2.5 V             :         : 7         : N              
+gpio_o[48]                   : F20       : output : 2.5 V             :         : 7         : N              
+wb_dat_o[4]                  : F21       : output : 2.5 V             :         : 7         : N              
+xirq_i[29]                   : F22       : input  : 2.5 V             :         : 7         : N              
+wb_dat_o[23]                 : F23       : output : 2.5 V             :         : 7         : N              
+cfs_in_i[16]                 : F24       : input  : 2.5 V             :         : 7         : N              
+twi_scl_o                    : F25       : output : 2.5 V             :         : 7         : N              
+wb_dat_o[5]                  : F26       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[21]                 : F27       : output : 2.5 V             :         : 6         : N              
+cfs_in_i[0]                  : F28       : input  : 2.5 V             :         : 6         : N              
+wb_adr_o[21]                 : F29       : output : 2.5 V             :         : 6         : N              
+gpio_o[53]                   : F30       : output : 2.5 V             :         : 6         : N              
 GND                          : G1        : gnd    :                   :         :           :                
 GND                          : G2        : gnd    :                   :         :           :                
 GND                          : G3        : gnd    :                   :         :           :                
 GND                          : G4        : gnd    :                   :         :           :                
 GND                          : G5        : gnd    :                   :         :           :                
-wb_dat_i[6]                  : G6        : input  : 2.5 V             :         : 8         : N              
-wb_dat_o[24]                 : G7        : output : 2.5 V             :         : 8         : N              
-wb_dat_o[3]                  : G8        : output : 2.5 V             :         : 8         : N              
+uart1_txd_o                  : G6        : output : 2.5 V             :         : 8         : N              
+pwm_o[5]                     : G7        : output : 2.5 V             :         : 8         : N              
+gpio_o[31]                   : G8        : output : 2.5 V             :         : 8         : N              
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : G9        : input  : 2.5 V             :         : 9         : N              
-cfs_out_o[5]                 : G10       : output : 2.5 V             :         : 8         : N              
-wb_adr_o[5]                  : G11       : output : 2.5 V             :         : 8         : N              
-gpio_i[23]                   : G12       : input  : 2.5 V             :         : 8         : N              
-gpio_i[52]                   : G13       : input  : 2.5 V             :         : 8         : N              
-wb_dat_o[5]                  : G14       : output : 2.5 V             :         : 8         : N              
-wb_dat_o[2]                  : G15       : output : 2.5 V             :         : 8         : N              
-wb_sel_o[0]                  : G16       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7         :                
-wb_adr_o[29]                 : G18       : output : 2.5 V             :         : 7         : N              
+gpio_i[36]                   : G10       : input  : 2.5 V             :         : 8         : N              
+gpio_i[10]                   : G11       : input  : 2.5 V             :         : 8         : N              
+gpio_o[16]                   : G12       : output : 2.5 V             :         : 8         : N              
+gpio_o[51]                   : G13       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 8         :                
+xirq_i[20]                   : G15       : input  : 2.5 V             :         : 8         : N              
+wb_adr_o[0]                  : G16       : output : 2.5 V             :         : 7         : N              
+wb_sel_o[1]                  : G17       : output : 2.5 V             :         : 7         : N              
+gpio_o[44]                   : G18       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : G19       : power  :                   : 2.5V    : 7         :                
-gpio_i[29]                   : G20       : input  : 2.5 V             :         : 7         : N              
-xirq_i[7]                    : G21       : input  : 2.5 V             :         : 7         : N              
-wb_sel_o[3]                  : G22       : output : 2.5 V             :         : 7         : N              
-wb_adr_o[27]                 : G23       : output : 2.5 V             :         : 7         : N              
-wb_adr_o[24]                 : G24       : output : 2.5 V             :         : 7         : N              
-spi_csn_o[5]                 : G25       : output : 2.5 V             :         : 7         : N              
-spi_dat_i                    : G26       : input  : 2.5 V             :         : 6         : N              
-gpio_o[61]                   : G27       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G28       :        :                   :         : 6         :                
-xirq_i[20]                   : G29       : input  : 2.5 V             :         : 6         : N              
-wb_dat_i[5]                  : G30       : input  : 2.5 V             :         : 6         : N              
+gpio_o[15]                   : G20       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 7         :                
+cfs_in_i[12]                 : G22       : input  : 2.5 V             :         : 7         : N              
+wb_adr_o[28]                 : G23       : output : 2.5 V             :         : 7         : N              
+xirq_i[31]                   : G24       : input  : 2.5 V             :         : 7         : N              
+wb_dat_i[2]                  : G25       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
+cfs_out_o[27]                : G27       : output : 2.5 V             :         : 6         : N              
+xirq_i[13]                   : G28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G29       :        :                   :         : 6         :                
+wb_dat_i[20]                 : G30       : input  : 2.5 V             :         : 6         : N              
 GND                          : H1        : gnd    :                   :         :           :                
 GND                          : H2        : gnd    :                   :         :           :                
 GXB_NC                       : H3        :        :                   :         : QL1       :                
@@ -590,7 +589,7 @@ GND                          : H5        : gnd    :                   :         
 GND                          : H6        : gnd    :                   :         :           :                
 VCCIO9                       : H7        : power  :                   : 2.5V    : 9         :                
 GND                          : H8        : gnd    :                   :         :           :                
-spi_csn_o[6]                 : H9        : output : 2.5 V             :         : 8         : N              
+gpio_o[24]                   : H9        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : H10       : power  :                   : 2.5V    : 8         :                
 GND                          : H11       : gnd    :                   :         :           :                
 VCCIO8                       : H12       : power  :                   : 2.5V    : 8         :                
@@ -605,13 +604,13 @@ GND                          : H20       : gnd    :                   :         
 VCCIO7                       : H21       : power  :                   : 2.5V    : 7         :                
 VCCIO7                       : H22       : power  :                   : 2.5V    : 7         :                
 GND                          : H23       : gnd    :                   :         :           :                
-xirq_i[12]                   : H24       : input  : 2.5 V             :         : 7         : N              
-gpio_i[27]                   : H25       : input  : 2.5 V             :         : 6         : N              
+uart0_txd_o                  : H24       : output : 2.5 V             :         : 7         : Y              
+gpio_i[15]                   : H25       : input  : 2.5 V             :         : 6         : N              
 GND                          : H26       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H27       :        :                   :         : 6         :                
-gpio_i[53]                   : H28       : input  : 2.5 V             :         : 6         : N              
+wb_adr_o[31]                 : H27       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H28       :        :                   :         : 6         :                
 GND                          : H29       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H30       :        :                   :         : 6         :                
+gpio_i[54]                   : H30       : input  : 2.5 V             :         : 6         : N              
 GXB_GND*                     : J1        :        :                   :         : QL1       :                
 GXB_GND*                     : J2        :        :                   :         : QL1       :                
 GND                          : J3        : gnd    :                   :         :           :                
@@ -620,7 +619,7 @@ GND                          : J5        : gnd    :                   :         
 VCCA                         : J6        : power  :                   : 2.5V    :           :                
 GND                          : J7        : gnd    :                   :         :           :                
 GND                          : J8        : gnd    :                   :         :           :                
-gpio_o[10]                   : J9        : output : 2.5 V             :         : 8         : N              
+wb_tag_o[1]                  : J9        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : J10       : power  :                   : 2.5V    : 8         :                
 VCCIO8                       : J11       : power  :                   : 2.5V    : 8         :                
 VCCIO8                       : J12       : power  :                   : 2.5V    : 8         :                
@@ -636,12 +635,12 @@ VCCIO7                       : J21       : power  :                   : 2.5V    
 VCCIO7                       : J22       : power  :                   : 2.5V    : 7         :                
 VCCD_PLL                     : J23       : power  :                   : 1.2V    :           :                
 GND                          : J24       : gnd    :                   :         :           :                
-spi_csn_o[4]                 : J25       : output : 2.5 V             :         : 6         : N              
-xirq_i[4]                    : J26       : input  : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J27       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J28       :        :                   :         : 6         :                
-wb_dat_o[13]                 : J29       : output : 2.5 V             :         : 6         : N              
-cfs_out_o[30]                : J30       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[9]                  : J25       : output : 2.5 V             :         : 6         : N              
+cfs_in_i[10]                 : J26       : input  : 2.5 V             :         : 6         : N              
+wb_dat_i[11]                 : J27       : input  : 2.5 V             :         : 6         : N              
+cfs_out_o[1]                 : J28       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[2]                  : J29       : output : 2.5 V             :         : 6         : N              
+wb_adr_o[20]                 : J30       : output : 2.5 V             :         : 6         : N              
 GND                          : K1        : gnd    :                   :         :           :                
 GND                          : K2        : gnd    :                   :         :           :                
 GXB_NC                       : K3        :        :                   :         : QL1       :                
@@ -658,20 +657,20 @@ VCCINT                       : K13       : power  :                   : 1.2V    
 GND                          : K14       : gnd    :                   :         :           :                
 GXB_GND*                     : K15       :        :                   :         : 8A        :                
 VCC_CLKIN8A                  : K16       : power  :                   : 2.5V    : 8A        :                
-xirq_i[30]                   : K17       : input  : 2.5 V             :         : 7         : N              
-cfs_in_i[30]                 : K18       : input  : 2.5 V             :         : 7         : N              
-gpio_i[9]                    : K19       : input  : 2.5 V             :         : 7         : N              
+gpio_o[38]                   : K17       : output : 2.5 V             :         : 7         : N              
+onewire_o                    : K18       : output : 2.5 V             :         : 7         : N              
+gpio_i[4]                    : K19       : input  : 2.5 V             :         : 7         : N              
 GND                          : K20       : gnd    :                   :         :           :                
-sdi_csn_i                    : K21       : input  : 2.5 V             :         : 7         : N              
-gpio_i[48]                   : K22       : input  : 2.5 V             :         : 7         : N              
+cfs_out_o[18]                : K21       : output : 2.5 V             :         : 7         : N              
+wb_dat_i[25]                 : K22       : input  : 2.5 V             :         : 7         : N              
 VCCA                         : K23       : power  :                   : 2.5V    :           :                
-cfs_in_i[29]                 : K24       : input  : 2.5 V             :         : 6         : N              
-wb_ack_i                     : K25       : input  : 2.5 V             :         : 6         : N              
-gpio_i[18]                   : K26       : input  : 2.5 V             :         : 6         : N              
-gpio_o[9]                    : K27       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : K28       :        :                   :         : 6         :                
-cfs_in_i[17]                 : K29       : input  : 2.5 V             :         : 6         : N              
-gpio_o[45]                   : K30       : output : 2.5 V             :         : 6         : N              
+pwm_o[10]                    : K24       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[12]                 : K25       : output : 2.5 V             :         : 6         : N              
+wb_dat_i[23]                 : K26       : input  : 2.5 V             :         : 6         : N              
+cfs_out_o[22]                : K27       : output : 2.5 V             :         : 6         : N              
+gpio_o[20]                   : K28       : output : 2.5 V             :         : 6         : N              
+gpio_i[35]                   : K29       : input  : 2.5 V             :         : 6         : N              
+xirq_i[28]                   : K30       : input  : 2.5 V             :         : 6         : N              
 GXB_GND*                     : L1        :        :                   :         : QL1       :                
 GXB_GND*                     : L2        :        :                   :         : QL1       :                
 GND                          : L3        : gnd    :                   :         :           :                
@@ -696,12 +695,12 @@ GND                          : L21       : gnd    :                   :         
 VCCIO6                       : L22       : power  :                   : 2.5V    : 6         :                
 GND                          : L23       : gnd    :                   :         :           :                
 VCCIO6                       : L24       : power  :                   : 2.5V    : 6         :                
-gpio_o[59]                   : L25       : output : 2.5 V             :         : 6         : N              
+jtag_tck_i                   : L25       : input  : 2.5 V             :         : 6         : N              
 GND                          : L26       : gnd    :                   :         :           :                
-pwm_o[0]                     : L27       : output : 2.5 V             :         : 6         : N              
-cfs_in_i[2]                  : L28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L27       :        :                   :         : 6         :                
+pwm_o[6]                     : L28       : output : 2.5 V             :         : 6         : N              
 GND                          : L29       : gnd    :                   :         :           :                
-gpio_i[41]                   : L30       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L30       :        :                   :         : 6         :                
 GND                          : M1        : gnd    :                   :         :           :                
 GND                          : M2        : gnd    :                   :         :           :                
 GXB_NC                       : M3        :        :                   :         : QL1       :                
@@ -722,16 +721,16 @@ VCCINT                       : M17       : power  :                   : 1.2V    
 GND                          : M18       : gnd    :                   :         :           :                
 VCCINT                       : M19       : power  :                   : 1.2V    :           :                
 GND                          : M20       : gnd    :                   :         :           :                
-gpio_i[56]                   : M21       : input  : 2.5 V             :         : 6         : N              
-cfs_out_o[28]                : M22       : output : 2.5 V             :         : 6         : N              
+gpio_o[21]                   : M21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 6         :                
 VCCIO6                       : M23       : power  :                   : 2.5V    : 6         :                
 VCCIO6                       : M24       : power  :                   : 2.5V    : 6         :                
-onewire_i                    : M25       : input  : 2.5 V             :         : 6         : N              
-onewire_o                    : M26       : output : 2.5 V             :         : 6         : N              
-cfs_in_i[8]                  : M27       : input  : 2.5 V             :         : 6         : N              
-gpio_o[46]                   : M28       : output : 2.5 V             :         : 6         : N              
-wb_sel_o[2]                  : M29       : output : 2.5 V             :         : 6         : N              
-gpio_i[49]                   : M30       : input  : 2.5 V             :         : 6         : N              
+cfs_out_o[16]                : M25       : output : 2.5 V             :         : 6         : N              
+cfs_in_i[30]                 : M26       : input  : 2.5 V             :         : 6         : N              
+wb_dat_i[10]                 : M27       : input  : 2.5 V             :         : 6         : N              
+gpio_i[44]                   : M28       : input  : 2.5 V             :         : 6         : N              
+gpio_i[18]                   : M29       : input  : 2.5 V             :         : 6         : N              
+fence_o                      : M30       : output : 2.5 V             :         : 6         : N              
 GXB_GND*                     : N1        :        :                   :         : QL1       :                
 GXB_GND*                     : N2        :        :                   :         : QL1       :                
 GND                          : N3        : gnd    :                   :         :           :                
@@ -755,12 +754,12 @@ VCCINT                       : N20       : power  :                   : 1.2V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 6         :                
 VCCIO6                       : N22       : power  :                   : 2.5V    : 6         :                
 VCCIO6                       : N23       : power  :                   : 2.5V    : 6         :                
-wb_dat_o[25]                 : N24       : output : 2.5 V             :         : 6         : N              
-wb_dat_i[26]                 : N25       : input  : 2.5 V             :         : 6         : N              
-gpio_o[55]                   : N26       : output : 2.5 V             :         : 6         : N              
-wb_tag_o[0]                  : N27       : output : 2.5 V             :         : 6         : N              
-gpio_o[20]                   : N28       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N29       :        :                   :         : 6         :                
+neoled_o                     : N24       : output : 2.5 V             :         : 6         : N              
+xirq_i[19]                   : N25       : input  : 2.5 V             :         : 6         : N              
+wb_dat_o[18]                 : N26       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N27       :        :                   :         : 6         :                
+xirq_i[1]                    : N28       : input  : 2.5 V             :         : 6         : N              
+wb_adr_o[19]                 : N29       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N30       :        :                   :         : 6         :                
 GND                          : P1        : gnd    :                   :         :           :                
 GND                          : P2        : gnd    :                   :         :           :                
@@ -782,16 +781,16 @@ VCCINT                       : P17       : power  :                   : 1.2V    
 GND                          : P18       : gnd    :                   :         :           :                
 VCCINT                       : P19       : power  :                   : 1.2V    :           :                
 GND                          : P20       : gnd    :                   :         :           :                
-xirq_i[1]                    : P21       : input  : 2.5 V             :         : 6         : N              
+wb_dat_i[15]                 : P21       : input  : 2.5 V             :         : 6         : N              
 VCCIO6                       : P22       : power  :                   : 2.5V    : 6         :                
 GND                          : P23       : gnd    :                   :         :           :                
 VCCIO6                       : P24       : power  :                   : 2.5V    : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P25       :        :                   :         : 6         :                
+xirq_i[3]                    : P25       : input  : 2.5 V             :         : 6         : N              
 GND                          : P26       : gnd    :                   :         :           :                
-wb_we_o                      : P27       : output : 2.5 V             :         : 6         : N              
-xirq_i[18]                   : P28       : input  : 2.5 V             :         : 6         : N              
+cfs_in_i[5]                  : P27       : input  : 2.5 V             :         : 6         : N              
+cfs_in_i[8]                  : P28       : input  : 2.5 V             :         : 6         : N              
 GND                          : P29       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P30       :        :                   :         : 6         :                
+gpio_o[25]                   : P30       : output : 2.5 V             :         : 6         : N              
 GXB_GND*                     : R1        :        :                   :         : QL1       :                
 GXB_GND*                     : R2        :        :                   :         : QL1       :                
 GND                          : R3        : gnd    :                   :         :           :                
@@ -815,13 +814,13 @@ VCCINT                       : R20       : power  :                   : 1.2V    
 GND                          : R21       : gnd    :                   :         :           :                
 VCCIO6                       : R22       : power  :                   : 2.5V    : 6         :                
 VCCIO6                       : R23       : power  :                   : 2.5V    : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R24       :        :                   :         : 6         :                
+xirq_i[0]                    : R24       : input  : 2.5 V             :         : 6         : N              
 gpio_o[6]                    : R25       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R26       :        :                   :         : 6         :                
-gpio_o[32]                   : R27       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R28       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R29       :        :                   :         : 6         :                
-gpio_o[29]                   : R30       : output : 2.5 V             :         : 6         : N              
+gpio_i[5]                    : R26       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R27       :        :                   :         : 6         :                
+cfs_out_o[10]                : R28       : output : 2.5 V             :         : 6         : N              
+wb_dat_o[22]                 : R29       : output : 2.5 V             :         : 6         : N              
+gpio_i[0]                    : R30       : input  : 2.5 V             :         : 6         : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 GXB_NC                       : T3        :        :                   :         : QL0       :                
@@ -846,10 +845,10 @@ gpio_o[4]                    : T21       : output : 2.5 V             :         
 GND                          : T22       : gnd    :                   :         :           :                
 gpio_o[0]                    : T23       : output : 2.5 V             :         : 5         : Y              
 gpio_o[1]                    : T24       : output : 2.5 V             :         : 5         : Y              
-cfs_in_i[19]                 : T25       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
 gpio_o[5]                    : T26       : output : 2.5 V             :         : 5         : Y              
 gpio_o[7]                    : T27       : output : 2.5 V             :         : 5         : Y              
-cfs_in_i[31]                 : T28       : input  : 2.5 V             :         : 6         : N              
+xirq_i[30]                   : T28       : input  : 2.5 V             :         : 6         : N              
 GND+                         : T29       :        :                   :         : 6         :                
 GND+                         : T30       :        :                   :         : 6         :                
 GXB_GND*                     : U1        :        :                   :         : QL0       :                
@@ -872,16 +871,16 @@ GND                          : U17       : gnd    :                   :         
 VCCINT                       : U18       : power  :                   : 1.2V    :           :                
 GND                          : U19       : gnd    :                   :         :           :                
 VCCINT                       : U20       : power  :                   : 1.2V    :           :                
-twi_sda_i                    : U21       : input  : 2.5 V             :         : 5         : N              
+gpio_o[28]                   : U21       : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : U22       : power  :                   : 2.5V    : 5         :                
 GND                          : U23       : gnd    :                   :         :           :                
 VCCIO5                       : U24       : power  :                   : 2.5V    : 5         :                
-gpio_o[30]                   : U25       : output : 2.5 V             :         : 5         : N              
+gpio_o[40]                   : U25       : output : 2.5 V             :         : 5         : N              
 GND                          : U26       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U27       :        :                   :         : 5         :                
-wb_adr_o[3]                  : U28       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U28       :        :                   :         : 5         :                
 GND                          : U29       : gnd    :                   :         :           :                
-gpio_i[57]                   : U30       : input  : 2.5 V             :         : 5         : N              
+gpio_o[36]                   : U30       : output : 2.5 V             :         : 5         : N              
 GND                          : V1        : gnd    :                   :         :           :                
 GND                          : V2        : gnd    :                   :         :           :                
 GXB_NC                       : V3        :        :                   :         : QL0       :                
@@ -902,14 +901,14 @@ VCCINT                       : V17       : power  :                   : 1.2V    
 GND                          : V18       : gnd    :                   :         :           :                
 VCCINT                       : V19       : power  :                   : 1.2V    :           :                
 GND                          : V20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
+gpio_i[14]                   : V21       : input  : 2.5 V             :         : 5         : N              
 VCCIO5                       : V22       : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : V23       : power  :                   : 2.5V    : 5         :                
 GND                          : V24       : gnd    :                   :         :           :                
-gpio_i[31]                   : V25       : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V26       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V25       :        :                   :         : 5         :                
+gpio_i[48]                   : V26       : input  : 2.5 V             :         : 5         : N              
 gpio_o[2]                    : V27       : output : 2.5 V             :         : 5         : Y              
-gpio_i[51]                   : V28       : input  : 2.5 V             :         : 5         : N              
+wb_dat_i[17]                 : V28       : input  : 2.5 V             :         : 5         : N              
 GND+                         : V29       :        :                   :         : 5         :                
 GND+                         : V30       :        :                   :         : 5         :                
 GXB_GND*                     : W1        :        :                   :         : QL0       :                
@@ -937,11 +936,11 @@ VCCIO5                       : W22       : power  :                   : 2.5V    
 VCCIO5                       : W23       : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
 gpio_o[3]                    : W25       : output : 2.5 V             :         : 5         : Y              
-gpio_o[31]                   : W26       : output : 2.5 V             :         : 5         : N              
-gpio_o[21]                   : W27       : output : 2.5 V             :         : 5         : N              
-gpio_i[50]                   : W28       : input  : 2.5 V             :         : 5         : N              
-wb_adr_o[13]                 : W29       : output : 2.5 V             :         : 5         : N              
-wb_adr_o[9]                  : W30       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W26       :        :                   :         : 5         :                
+gpio_i[53]                   : W27       : input  : 2.5 V             :         : 5         : N              
+gpio_o[50]                   : W28       : output : 2.5 V             :         : 5         : N              
+gpio_i[61]                   : W29       : input  : 2.5 V             :         : 5         : N              
+wb_dat_o[11]                 : W30       : output : 2.5 V             :         : 5         : N              
 GND                          : Y1        : gnd    :                   :         :           :                
 GND                          : Y2        : gnd    :                   :         :           :                
 GXB_NC                       : Y3        :        :                   :         : QL0       :                
@@ -958,17 +957,17 @@ VCCINT                       : Y13       : power  :                   : 1.2V    
 GND                          : Y14       : gnd    :                   :         :           :                
 VCCINT                       : Y15       : power  :                   : 1.2V    :           :                
 GND                          : Y16       : gnd    :                   :         :           :                
-gpio_i[33]                   : Y17       : input  : 2.5 V             :         : 4         : N              
-cfs_in_i[24]                 : Y18       : input  : 2.5 V             :         : 4         : N              
-gpio_o[25]                   : Y19       : output : 2.5 V             :         : 4         : N              
-gpio_i[8]                    : Y20       : input  : 2.5 V             :         : 4         : N              
-xirq_i[3]                    : Y21       : input  : 2.5 V             :         : 4         : N              
-xirq_i[19]                   : Y22       : input  : 2.5 V             :         : 5         : N              
+gpio_i[32]                   : Y17       : input  : 2.5 V             :         : 4         : N              
+gpio_o[27]                   : Y18       : output : 2.5 V             :         : 4         : N              
+gpio_i[26]                   : Y19       : input  : 2.5 V             :         : 4         : N              
+cfs_in_i[22]                 : Y20       : input  : 2.5 V             :         : 4         : N              
+wb_dat_i[9]                  : Y21       : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                
 GND                          : Y23       : gnd    :                   :         :           :                
 VCCIO5                       : Y24       : power  :                   : 2.5V    : 5         :                
-gpio_i[43]                   : Y25       : input  : 2.5 V             :         : 5         : N              
+xirq_i[26]                   : Y25       : input  : 2.5 V             :         : 5         : N              
 GND                          : Y26       : gnd    :                   :         :           :                
-wb_adr_o[31]                 : Y27       : output : 2.5 V             :         : 5         : N              
-wb_dat_i[22]                 : Y28       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y27       :        :                   :         : 5         :                
+wb_dat_i[14]                 : Y28       : input  : 2.5 V             :         : 5         : N              
 GND                          : Y29       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y30       :        :                   :         : 5         :                

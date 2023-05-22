@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CGX150DF31) Path("C:/Users/yagx0/OneDrive/Desktop/SD-DLP/neorv32-main/rtl/core/output_files/") File("nerrv32.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CGX150DF31) Path("C:/Users/yagx0/OneDrive/Desktop/SD/Projects/neorv32-RISCV/rtl/core/output_files/") File("nerrv32.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

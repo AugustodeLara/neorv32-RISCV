@@ -47,7 +47,7 @@
  **************************************************************************/
 /**@{*/
 /** UART BAUD rate */
-#define BAUD_RATE 19200
+// #define BAUD_RATE 19200
 /**@}*/
 
 
@@ -56,7 +56,7 @@
  * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
  **************************************************************************/
 void xirq_handler_ch0(void) {
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 0);
+    neorv32_gpio_port_set(0x01); // increment counter and mask for lowest 8 bit
 }
 
 /**********************************************************************//**
@@ -64,7 +64,7 @@ void xirq_handler_ch0(void) {
  * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
  **************************************************************************/
 void xirq_handler_ch1(void) {
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 1);
+    neorv32_gpio_port_set(0x02); // increment counter and mask for lowest 8 bit
 }
 
 /**********************************************************************//**
@@ -72,7 +72,7 @@ void xirq_handler_ch1(void) {
  * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
  **************************************************************************/
 void xirq_handler_ch2(void) {
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 2);
+    neorv32_gpio_port_set(0x03); // increment counter and mask for lowest 8 bit
 }
 
 /**********************************************************************//**
@@ -80,7 +80,7 @@ void xirq_handler_ch2(void) {
  * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
  **************************************************************************/
 void xirq_handler_ch3(void) {
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 3);
+    neorv32_gpio_port_set(0x04); // increment counter and mask for lowest 8 bit
 }
 
 
@@ -93,22 +93,25 @@ void xirq_handler_ch3(void) {
  **************************************************************************/
 int main() {
 
+  // clear GPIO output (set all bits to 0)
+  neorv32_gpio_port_set(0);
+
   // initialize the neorv32 runtime environment
   // this will take care of handling all CPU traps
   neorv32_rte_setup();
 
   // setup UART at default baud rate, no interrupts
-  neorv32_uart0_setup(BAUD_RATE, 0);
+  // neorv32_uart0_setup(BAUD_RATE, 0);
 
   // check if XIRQ unit is implemented at all
   if (neorv32_xirq_available() == 0) {
-    neorv32_uart0_printf("XIRQ not synthesized!\n");
+    neorv32_gpio_port_set(0xff);
     return 1;
   }
 
 
   // intro
-  neorv32_uart0_printf("<< External Interrupts Controller (XIRQ) Demo Program >>\n\n");
+  // neorv32_uart0_printf("<< External Interrupts Controller (XIRQ) Demo Program >>\n\n");
 
   int err_cnt = 0;
 
@@ -120,7 +123,7 @@ int main() {
 
   // check if setup went fine
   if (err_cnt) {
-    neorv32_uart0_printf("Error during XIRQ setup!\n");
+    neorv32_gpio_port_set(0x0f);
     return 1;
   }
 
@@ -136,7 +139,7 @@ int main() {
 
   // check if installation went fine
   if (err_cnt) {
-    neorv32_uart0_printf("Error during XIRQ install!\n");
+    neorv32_gpio_port_set(0xf0);
     return 1;
   }
 
@@ -150,19 +153,19 @@ int main() {
   // the code below assumes the XIRQ inputs are connected to the processor's GPIO output port
   // so we can trigger the IRQs from software; if you have connected the XIRQs to buttons you
   // can remove the code below (note the trigger configuration using the XIRQ generics!)
-  {
-    neorv32_uart0_printf("Triggering XIRQs...\n");
-    // trigger XIRQs 3:0 at once
-    // assumes xirq_i(31:0) <= gpio.output(31:0)
+  // {
+  //   neorv32_uart0_printf("Triggering XIRQs...\n");
+  //   // trigger XIRQs 3:0 at once
+  //   // assumes xirq_i(31:0) <= gpio.output(31:0)
 
-    // due to the prioritization this will execute
-    // 1. xirq_handler_ch0
-    // 2. xirq_handler_ch1
-    // 3. xirq_handler_ch2
-    // 4. xirq_handler_ch3
-    neorv32_gpio_port_set(0xF); // set output pins 3:0 -> trigger XIRQ 3:0
-    neorv32_gpio_port_set(0x0);
-  }
+  //   // due to the prioritization this will execute
+  //   // 1. xirq_handler_ch0
+  //   // 2. xirq_handler_ch1
+  //   // 3. xirq_handler_ch2
+  //   // 4. xirq_handler_ch3
+  //   neorv32_gpio_port_set(0xF); // set output pins 3:0 -> trigger XIRQ 3:0
+  //   neorv32_gpio_port_set(0x0);
+  // }
 
   // All incoming XIRQ interrupt requests are "prioritized" in this example. The XIRQ FIRQ handler
   // reads the ID of the interrupt with the highest priority from the XIRQ controller ("source" register) and calls the according
@@ -178,24 +181,26 @@ int main() {
 
   // just as an example: to disable certain XIRQ interrupt channels, we can
   // un-install the according handler. this will also clear a pending interrupt for that channel
-  neorv32_xirq_uninstall(0); // disable XIRQ channel 0 and remove associated handler
-  neorv32_xirq_uninstall(1); // disable XIRQ channel 1 and remove associated handler
-  neorv32_xirq_uninstall(2); // disable XIRQ channel 2 and remove associated handler
-  neorv32_xirq_uninstall(3); // disable XIRQ channel 3 and remove associated handler
+  // neorv32_xirq_uninstall(0); // disable XIRQ channel 0 and remove associated handler
+  // neorv32_xirq_uninstall(1); // disable XIRQ channel 1 and remove associated handler
+  // neorv32_xirq_uninstall(2); // disable XIRQ channel 2 and remove associated handler
+  // neorv32_xirq_uninstall(3); // disable XIRQ channel 3 and remove associated handler
 
   // you can also manually clear pending interrupts
-  neorv32_xirq_clear_pending(0); // clear pending interrupt of channel 0
+  // neorv32_xirq_clear_pending(0); // clear pending interrupt of channel 0
 
   // manually enable and disable XIRQ channels
-  neorv32_xirq_channel_enable(0); // enable channel 0
-  neorv32_xirq_channel_disable(0); // disable channel 0
+  // neorv32_xirq_channel_enable(0); // enable channel 0
+  // neorv32_xirq_channel_disable(0); // disable channel 0
 
   // globally enable/disable XIRQ CPU interrupt
   // this will not affect the XIRQ configuration / pending interrupts
-  neorv32_xirq_global_enable();
-  neorv32_xirq_global_disable();
+  // neorv32_xirq_global_enable();
+  // neorv32_xirq_global_disable();
 
-  neorv32_uart0_printf("Program completed.\n");
+  // neorv32_uart0_printf("Program completed.\n");
+
+while(1);
 
   return 0;
 }

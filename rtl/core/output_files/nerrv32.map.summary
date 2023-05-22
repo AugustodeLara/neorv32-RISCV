@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Wed May 10 16:24:29 2023
-Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Analysis & Synthesis Status : Successful - Mon May 22 20:35:15 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : nerrv32
 Top-level Entity Name : neorv32_top
 Family : Cyclone IV GX
-Total logic elements : 2,166
-    Total combinational functions : 1,960
-    Dedicated logic registers : 949
-Total registers : 949
+Total logic elements : 3,280
+    Total combinational functions : 2,979
+    Dedicated logic registers : 1,376
+Total registers : 1376
 Total pins : 390
 Total virtual pins : 0
-Total memory bits : 518,144
+Total memory bits : 231,424
 Embedded Multiplier 9-bit elements : 0
 Total GXB Receiver Channel PCS : 0
 Total GXB Receiver Channel PMA : 0

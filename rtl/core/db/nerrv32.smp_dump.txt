@@ -7,6 +7,12 @@ arbiter.state.A_RETIRE 0 0 1 0 1
 arbiter.state.B_BUSY 0 1 0 0 1 
 arbiter.state.B_RETIRE 1 0 0 0 1 
 
+State Machine - |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|ctrl.state
+Name ctrl.state.S_DONE ctrl.state.S_BUSY ctrl.state.S_IDLE 
+ctrl.state.S_IDLE 0 0 0 
+ctrl.state.S_BUSY 0 1 1 
+ctrl.state.S_DONE 1 0 1 
+
 State Machine - |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|debug_ctrl.state
 Name debug_ctrl.state.DEBUG_LEAVING debug_ctrl.state.DEBUG_ONLINE debug_ctrl.state.DEBUG_OFFLINE 
 debug_ctrl.state.DEBUG_OFFLINE 0 0 0 

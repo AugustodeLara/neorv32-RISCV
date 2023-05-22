@@ -51,16 +51,16 @@ entity neorv32_top is
     HART_ID                      : std_ulogic_vector(31 downto 0) := x"00000000"; -- hardware thread ID
     VENDOR_ID                    : std_ulogic_vector(31 downto 0) := x"00000000"; -- vendor's JEDEC ID
     CUSTOM_ID                    : std_ulogic_vector(31 downto 0) := x"00000000"; -- custom user-defined ID
-    INT_BOOTLOADER_EN            : boolean := false;  -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
+    INT_BOOTLOADER_EN            : boolean := true;  -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
 
     -- On-Chip Debugger (OCD) --
     ON_CHIP_DEBUGGER_EN          : boolean := false;  -- implement on-chip debugger
 
     -- RISC-V CPU Extensions --
     CPU_EXTENSION_RISCV_B        : boolean := false;  -- implement bit-manipulation extension?
-    CPU_EXTENSION_RISCV_C        : boolean := false;  -- implement compressed extension?
+    CPU_EXTENSION_RISCV_C        : boolean := true;  -- implement compressed extension?
     CPU_EXTENSION_RISCV_E        : boolean := false;  -- implement embedded RF extension?
-    CPU_EXTENSION_RISCV_M        : boolean := false;  -- implement mul/div extension?
+    CPU_EXTENSION_RISCV_M        : boolean := true;  -- implement mul/div extension?
     CPU_EXTENSION_RISCV_U        : boolean := false;  -- implement user mode extension?
     CPU_EXTENSION_RISCV_Zfinx    : boolean := false;  -- implement 32-bit floating-point extension (using INT regs!)
     CPU_EXTENSION_RISCV_Zicntr   : boolean := true;   -- implement base counters?
@@ -73,7 +73,7 @@ entity neorv32_top is
     -- Tuning Options --
     FAST_MUL_EN                  : boolean := false;  -- use DSPs for M extension's multiplier
     FAST_SHIFT_EN                : boolean := false;  -- use barrel shifter for shift operations
-    CPU_IPB_ENTRIES              : natural := 1;      -- entries in instruction prefetch buffer, has to be a power of 2, min 1
+    CPU_IPB_ENTRIES              : natural := 2;      -- entries in instruction prefetch buffer, has to be a power of 2, min 1
 
     -- Physical Memory Protection (PMP) --
     PMP_NUM_REGIONS              : natural := 0;      -- number of regions (0..16)
@@ -85,11 +85,11 @@ entity neorv32_top is
 
     -- Internal Instruction memory (IMEM) --
     MEM_INT_IMEM_EN              : boolean := true;  -- implement processor-internal instruction memory
-    MEM_INT_IMEM_SIZE            : natural := 32*1024; -- size of processor-internal instruction memory in bytes
+    MEM_INT_IMEM_SIZE            : natural := 16*1024; -- size of processor-internal instruction memory in bytes
 
     -- Internal Data memory (DMEM) --
     MEM_INT_DMEM_EN              : boolean := true;  -- implement processor-internal data memory
-    MEM_INT_DMEM_SIZE            : natural := 32*1024; -- size of processor-internal data memory in bytes
+    MEM_INT_DMEM_SIZE            : natural := 8*1024; -- size of processor-internal data memory in bytes
 
     -- Internal Instruction Cache (iCACHE) --
     ICACHE_EN                    : boolean := false;  -- implement instruction cache
@@ -111,14 +111,14 @@ entity neorv32_top is
     MEM_EXT_ASYNC_TX             : boolean := false;  -- use register buffer for TX data when false
 
     -- External Interrupts Controller (XIRQ) --
-    XIRQ_NUM_CH                  : natural := 0;      -- number of external IRQ channels (0..32)
+    XIRQ_NUM_CH                  : natural := 4;      -- number of external IRQ channels (0..32)
     XIRQ_TRIGGER_TYPE            : std_ulogic_vector(31 downto 0) := x"ffffffff"; -- trigger type: 0=level, 1=edge
-    XIRQ_TRIGGER_POLARITY        : std_ulogic_vector(31 downto 0) := x"ffffffff"; -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
+    XIRQ_TRIGGER_POLARITY        : std_ulogic_vector(31 downto 0) := x"00000000"; -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
 
     -- Processor peripherals --
     IO_GPIO_NUM                  : natural := 8;      -- number of GPIO input/output pairs (0..64)
     IO_MTIME_EN                  : boolean := true;  -- implement machine system timer (MTIME)?
-    IO_UART0_EN                  : boolean := false;  -- implement primary universal asynchronous receiver/transmitter (UART0)?
+    IO_UART0_EN                  : boolean := true;  -- implement primary universal asynchronous receiver/transmitter (UART0)?
     IO_UART0_RX_FIFO             : natural := 1;      -- RX fifo depth, has to be a power of two, min 1
     IO_UART0_TX_FIFO             : natural := 1;      -- TX fifo depth, has to be a power of two, min 1
     IO_UART1_EN                  : boolean := false;  -- implement secondary universal asynchronous receiver/transmitter (UART1)?

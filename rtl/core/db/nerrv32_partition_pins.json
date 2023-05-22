@@ -44,6 +44,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "uart0_txd_o",
+					"strict" : false
+				},
+				{
+					"name" : "uart0_rts_o",
+					"strict" : false
+				},
+				{
 					"name" : "jtag_tdi_i",
 					"strict" : false
 				},
@@ -56,15 +64,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[1]",
-					"strict" : false
-				},
-				{
-					"name" : "mext_irq_i",
-					"strict" : false
-				},
-				{
-					"name" : "msw_irq_i",
+					"name" : "uart0_cts_i",
 					"strict" : false
 				},
 				{
@@ -76,11 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[4]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[3]",
+					"name" : "gpio_i[5]",
 					"strict" : false
 				},
 				{
@@ -88,11 +84,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[5]",
+					"name" : "gpio_i[7]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[7]",
+					"name" : "gpio_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "msw_irq_i",
+					"strict" : false
+				},
+				{
+					"name" : "mext_irq_i",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "uart0_rxd_i",
 					"strict" : false
 				}
 			]
