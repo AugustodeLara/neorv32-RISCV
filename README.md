@@ -30,4 +30,5 @@ The major idea behind this project is developing an educational plataform for st
 
 
 ## Notes
+	- To access the DEi-150 pinout go to hardware/Manual/DE2i-150_FPGA_System_manual.pdf 
 More info about the neorv32-RISCV: [GitHub](https://github.com/AugustodeLara/neorv32-RISCV) and [Digital Systems and Reconfigurable Devices](https://gse.ufsc.br/bezerra/?page_id=2934)
