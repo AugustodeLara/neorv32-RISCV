@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon May 22 20:35:15 2023
+Analysis & Synthesis Status : Successful - Tue May 30 00:17:58 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : nerrv32
 Top-level Entity Name : neorv32_top
 Family : Cyclone IV GX
-Total logic elements : 3,280
-    Total combinational functions : 2,979
-    Dedicated logic registers : 1,376
-Total registers : 1376
+Total logic elements : 3,495
+    Total combinational functions : 3,082
+    Dedicated logic registers : 1,512
+Total registers : 1512
 Total pins : 390
 Total virtual pins : 0
 Total memory bits : 231,424

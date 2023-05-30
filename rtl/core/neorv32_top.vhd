@@ -85,7 +85,7 @@ entity neorv32_top is
 
     -- Internal Instruction memory (IMEM) --
     MEM_INT_IMEM_EN              : boolean := true;  -- implement processor-internal instruction memory
-    MEM_INT_IMEM_SIZE            : natural := 16*1024; -- size of processor-internal instruction memory in bytes
+    MEM_INT_IMEM_SIZE            : natural := 32*1024; -- size of processor-internal instruction memory in bytes
 
     -- Internal Data memory (DMEM) --
     MEM_INT_DMEM_EN              : boolean := true;  -- implement processor-internal data memory
@@ -116,7 +116,7 @@ entity neorv32_top is
     XIRQ_TRIGGER_POLARITY        : std_ulogic_vector(31 downto 0) := x"00000000"; -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
 
     -- Processor peripherals --
-    IO_GPIO_NUM                  : natural := 8;      -- number of GPIO input/output pairs (0..64)
+    IO_GPIO_NUM                  : natural := 64;      -- number of GPIO input/output pairs (0..64)
     IO_MTIME_EN                  : boolean := true;  -- implement machine system timer (MTIME)?
     IO_UART0_EN                  : boolean := true;  -- implement primary universal asynchronous receiver/transmitter (UART0)?
     IO_UART0_RX_FIFO             : natural := 1;      -- RX fifo depth, has to be a power of two, min 1

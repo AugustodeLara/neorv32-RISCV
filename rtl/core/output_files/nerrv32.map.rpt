@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nerrv32
-Mon May 22 20:35:15 2023
+Tue May 30 00:17:59 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -103,15 +103,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 22 20:35:15 2023      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 30 00:17:58 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; nerrv32                                    ;
 ; Top-level Entity Name              ; neorv32_top                                ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 3,280                                      ;
-;     Total combinational functions  ; 2,979                                      ;
-;     Dedicated logic registers      ; 1,376                                      ;
-; Total registers                    ; 1376                                       ;
+; Total logic elements               ; 3,495                                      ;
+;     Total combinational functions  ; 3,082                                      ;
+;     Dedicated logic registers      ; 1,512                                      ;
+; Total registers                    ; 1512                                       ;
 ; Total pins                         ; 390                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 231,424                                    ;
@@ -278,9 +278,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total memory bits        ; 231424           ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; clk_i~input      ;
-; Maximum fan-out          ; 1536             ;
-; Total fan-out            ; 17356            ;
-; Average fan-out          ; 3.28             ;
+; Maximum fan-out          ; 1672             ;
+; Total fan-out            ; 18201            ;
+; Average fan-out          ; 3.29             ;
 +--------------------------+------------------+
 
 
@@ -289,19 +289,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                               ; Library Name ;
 +-------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |neorv32_top                                                                                          ; 2979 (126)        ; 1376 (26)    ; 231424      ; 0            ; 0       ; 0         ; 0         ; 390  ; 0            ; |neorv32_top                                                                                                                                                                      ; work         ;
+; |neorv32_top                                                                                          ; 3082 (129)        ; 1512 (26)    ; 231424      ; 0            ; 0       ; 0         ; 0         ; 390  ; 0            ; |neorv32_top                                                                                                                                                                      ; work         ;
 ;    |neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|                               ; 3 (3)             ; 2 (2)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst                                                                                                   ; work         ;
 ;       |altsyncram:Mux17_rtl_0|                                                                        ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|altsyncram:Mux17_rtl_0                                                                            ; work         ;
 ;          |altsyncram_js01:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|altsyncram:Mux17_rtl_0|altsyncram_js01:auto_generated                                             ; work         ;
 ;    |neorv32_bus_keeper:neorv32_bus_keeper_inst|                                                       ; 18 (18)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_bus_keeper:neorv32_bus_keeper_inst                                                                                                                           ; work         ;
 ;    |neorv32_busswitch:neorv32_core_busswitch_inst|                                                    ; 65 (65)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_busswitch:neorv32_core_busswitch_inst                                                                                                                        ; work         ;
-;    |neorv32_cpu:neorv32_cpu_inst|                                                                     ; 2256 (0)          ; 947 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst                                                                                                                                         ; work         ;
+;    |neorv32_cpu:neorv32_cpu_inst|                                                                     ; 2266 (0)          ; 947 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst                                                                                                                                         ; work         ;
 ;       |neorv32_cpu_alu:neorv32_cpu_alu_inst|                                                          ; 684 (212)         ; 223 (11)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst                                                                                                    ; work         ;
 ;          |neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|          ; 430 (430)         ; 173 (173)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst                  ; work         ;
 ;          |neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|                                         ; 42 (42)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst                                                 ; work         ;
 ;       |neorv32_cpu_bus:neorv32_cpu_bus_inst|                                                          ; 78 (78)           ; 104 (104)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst                                                                                                    ; work         ;
-;       |neorv32_cpu_control:neorv32_cpu_control_inst|                                                  ; 1325 (1098)       ; 620 (544)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst                                                                                            ; work         ;
-;          |neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst| ; 180 (180)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst ; work         ;
+;       |neorv32_cpu_control:neorv32_cpu_control_inst|                                                  ; 1335 (1105)       ; 620 (544)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst                                                                                            ; work         ;
+;          |neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst| ; 183 (183)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst ; work         ;
 ;          |neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|                                       ; 24 (24)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst                                       ; work         ;
 ;          |neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|                                       ; 23 (23)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst                                       ; work         ;
 ;       |neorv32_cpu_regfile:neorv32_cpu_regfile_inst|                                                  ; 169 (169)         ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst                                                                                            ; work         ;
@@ -309,7 +309,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_qf81:auto_generated|                                                          ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|altsyncram:reg_file[0][31]__1|altsyncram_qf81:auto_generated                               ; work         ;
 ;          |altsyncram:reg_file[0][31]__2|                                                              ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|altsyncram:reg_file[0][31]__2                                                              ; work         ;
 ;             |altsyncram_80h1:auto_generated|                                                          ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|altsyncram:reg_file[0][31]__2|altsyncram_80h1:auto_generated                               ; work         ;
-;    |neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|                                   ; 13 (13)           ; 2 (2)        ; 65536       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst                                                                                                       ; work         ;
+;    |neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|                                   ; 14 (14)           ; 2 (2)        ; 65536       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst                                                                                                       ; work         ;
 ;       |altsyncram:mem_ram_b0_rtl_0|                                                                   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b0_rtl_0                                                                           ; work         ;
 ;          |altsyncram_3j81:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b0_rtl_0|altsyncram_3j81:auto_generated                                            ; work         ;
 ;       |altsyncram:mem_ram_b1_rtl_0|                                                                   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b1_rtl_0                                                                           ; work         ;
@@ -318,7 +318,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_3j81:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b2_rtl_0|altsyncram_3j81:auto_generated                                            ; work         ;
 ;       |altsyncram:mem_ram_b3_rtl_0|                                                                   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b3_rtl_0                                                                           ; work         ;
 ;          |altsyncram_3j81:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b3_rtl_0|altsyncram_3j81:auto_generated                                            ; work         ;
-;    |neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|                                           ; 13 (13)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst                                                                                                               ; work         ;
+;    |neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|                                           ; 101 (101)         ; 161 (161)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst                                                                                                               ; work         ;
 ;    |neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|                                   ; 7 (7)             ; 2 (2)        ; 131072      ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst                                                                                                       ; work         ;
 ;       |altsyncram:mem_ram_b0_rtl_0|                                                                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b0_rtl_0                                                                           ; work         ;
 ;          |altsyncram_9j81:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b0_rtl_0|altsyncram_9j81:auto_generated                                            ; work         ;
@@ -330,8 +330,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_9j81:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b3_rtl_0|altsyncram_9j81:auto_generated                                            ; work         ;
 ;    |neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst|                                        ; 289 (289)         ; 166 (166)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst                                                                                                            ; work         ;
 ;    |neorv32_sysinfo:neorv32_sysinfo_inst|                                                             ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_sysinfo:neorv32_sysinfo_inst                                                                                                                                 ; work         ;
-;    |neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|                                         ; 147 (134)         ; 149 (109)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst                                                                                                             ; work         ;
-;       |neorv32_fifo:rx_engine_fifo_inst|                                                              ; 6 (6)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|neorv32_fifo:rx_engine_fifo_inst                                                                            ; work         ;
+;    |neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|                                         ; 148 (136)         ; 149 (109)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst                                                                                                             ; work         ;
+;       |neorv32_fifo:rx_engine_fifo_inst|                                                              ; 5 (5)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|neorv32_fifo:rx_engine_fifo_inst                                                                            ; work         ;
 ;       |neorv32_fifo:tx_engine_fifo_inst|                                                              ; 7 (7)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|neorv32_fifo:tx_engine_fifo_inst                                                                            ; work         ;
 ;    |neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|                                           ; 33 (33)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neorv32_top|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst                                                                                                               ; work         ;
 +-------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -493,7 +493,6 @@ Encoding Type:  One-Hot
 ; neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|bus_rsp_o.data[5..31]                                      ; Stuck at GND due to stuck port data_in                                                                        ;
 ; neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|irq_source[2..4]                                           ; Stuck at GND due to stuck port data_in                                                                        ;
 ; neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|bus_rsp_o.data[27..29]                                   ; Stuck at GND due to stuck port data_in                                                                        ;
-; neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|bus_rsp_o.data[8..31]                                      ; Stuck at GND due to stuck port data_in                                                                        ;
 ; neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|bus_rsp_o.err                                      ; Stuck at GND due to stuck port data_in                                                                        ;
 ; neorv32_bus_keeper:neorv32_bus_keeper_inst|cpu_rsp_o.data[1..30]                                                  ; Stuck at GND due to stuck port data_in                                                                        ;
 ; neorv32_busswitch:neorv32_core_busswitch_inst|b_wr_req_buf                                                        ; Stuck at GND due to stuck port data_in                                                                        ;
@@ -555,7 +554,7 @@ Encoding Type:  One-Hot
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.state_prev.IF_PENDING      ; Lost fanout                                                                                                   ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.state_prev.IF_WAIT         ; Lost fanout                                                                                                   ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.state.MEM_REQ            ; Merged with neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|ctrl.bus_mo_we          ;
-; Total Number of Removed Registers = 199                                                                           ;                                                                                                               ;
+; Total Number of Removed Registers = 175                                                                           ;                                                                                                               ;
 +-------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
@@ -612,12 +611,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1376  ;
+; Total registers                              ; 1512  ;
 ; Number of registers using Synchronous Clear  ; 30    ;
 ; Number of registers using Synchronous Load   ; 326   ;
-; Number of registers using Asynchronous Clear ; 900   ;
+; Number of registers using Asynchronous Clear ; 956   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 819   ;
+; Number of registers using Clock Enable       ; 875   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -627,32 +626,32 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                               ; Fan out ;
 +-------------------------------------------------------------------------------------------------+---------+
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[17] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[16] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.restart  ; 14      ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[28] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[27] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[26] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[25] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[24] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[23] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[22] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[21] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[20] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[19] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[18] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[17] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[16] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.restart  ; 14      ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[31] ; 6       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[30] ; 5       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[29] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[28] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[27] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[26] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[25] ; 5       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[24] ; 5       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[28]      ; 1       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[27]      ; 1       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[24]      ; 1       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[23]      ; 1       ;
+; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[19]      ; 1       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[10]      ; 1       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[9]       ; 1       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[8]       ; 1       ;
 ; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[2]       ; 1       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[19]      ; 1       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[23]      ; 1       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[24]      ; 1       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[27]      ; 1       ;
-; neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[28]      ; 1       ;
 ; Total number of inverted registers = 26                                                         ;         ;
 +-------------------------------------------------------------------------------------------------+---------+
 
@@ -674,68 +673,68 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|ctrl.bus_req_rd                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|rdata_o[11]                                                                                         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|rdata_o[7]                                                                                          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|d_bus_ben_o[0]                                                                                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neorv32_top|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|nclr_pending[0]                                                                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|fifo.w_pnt[0]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|fifo.r_pnt[0]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|fifo.w_pnt[0]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|fifo.r_pnt[0]                          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mip_firq_nclr[8]                                                                        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|shifter.cnt[3]                                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|arbiter.pend_wr                                                                                     ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|mul.prod[15]      ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|bus_rsp_o.data[26]                                                                                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|bus_rsp_o.data[6]                                                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|ctrl.cnt[1]       ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mcause[0]                                                                               ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst|bus_rsp_o.data[1]                                                                                           ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |neorv32_top|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|bus_rsp_o.data[7]                                                                                              ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|mul.prod[47]      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|div.remainder[19] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|div.quotient[12]  ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|shifter.sreg[13]                                 ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.sreg[1]                                                                                            ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.pc[5]                                                                          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|bus_rsp_o.data[1]                                                                                              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.ir[1]                                                                        ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|rdata_o[4]                                                                                          ;
-; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mepc[1]                                                                                 ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.bitcnt[0]                                                                                          ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.baudcnt[7]                                                                                         ;
-; 32:1               ; 4 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|imm_o[1]                                                                                    ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.sreg[0]                                                                                            ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.sreg[4]                                                                                            ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.next_pc[5]                                                                   ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 9 LEs                ; 36 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.baudcnt[7]                                                                                         ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.state[1]                                                                                           ;
-; 64:1               ; 32 bits   ; 1344 LEs      ; 64 LEs               ; 1280 LEs               ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mtval[25]                                                                               ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|imm_o[15]                                                                                   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|trap_ctrl.cause[1]                                                                          ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[14]                                                                               ;
-; 11:1               ; 9 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[21]                                                                               ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[19]                                                                               ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[30]                                                                               ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Mux58                                                                                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|trap_ctrl.env_call                                                                          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|opa_addr[3]                                                                                 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|cnt.we_lo[0]                                                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|cnt.we_hi[0]                                                                                ;
-; 11:1               ; 31 bits   ; 217 LEs       ; 186 LEs              ; 31 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|Mux18                                                                                       ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|res_o[8]          ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |neorv32_top|neorv32_busswitch:neorv32_core_busswitch_inst|Selector1                                                                                                               ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |neorv32_top|neorv32_busswitch:neorv32_core_busswitch_inst|Selector0                                                                                                               ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector67                                                                                  ;
-; 13:1               ; 3 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector73                                                                                  ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 4 LEs                ; 14 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector68                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|ctrl.bus_req_rd                                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|rdata_o[10]                                                                                        ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|d_bus_wdata_o[29]                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|d_bus_ben_o[0]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neorv32_top|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|nclr_pending[0]                                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|fifo.w_pnt[0]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|fifo.r_pnt[0]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|fifo.w_pnt[0]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|fifo.r_pnt[1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mip_firq_nclr[8]                                                                       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|shifter.cnt[3]                                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|arbiter.pend_wr                                                                                    ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|mul.prod[2]      ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|bus_rsp_o.data[9]                                                                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|bus_rsp_o.data[4]                                                                                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|ctrl.cnt[3]      ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mcause[4]                                                                              ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|bus_rsp_o.data[2]                                                                                             ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst|bus_rsp_o.data[12]                                                                                         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|mul.prod[43]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|div.remainder[6] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|div.quotient[31] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|shifter.sreg[10]                                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.sreg[8]                                                                                           ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.pc[8]                                                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_xirq_inst|bus_rsp_o.data[0]                                                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.ir[0]                                                                       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst|rdata_o[4]                                                                                         ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mepc[28]                                                                               ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.bitcnt[0]                                                                                         ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|rx_engine.baudcnt[3]                                                                                        ;
+; 32:1               ; 4 bits    ; 84 LEs        ; 8 LEs                ; 76 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|imm_o[1]                                                                                   ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.sreg[0]                                                                                           ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.sreg[1]                                                                                           ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.next_pc[31]                                                                 ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 9 LEs                ; 36 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.baudcnt[4]                                                                                        ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |neorv32_top|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|tx_engine.state[1]                                                                                          ;
+; 64:1               ; 32 bits   ; 1344 LEs      ; 64 LEs               ; 1280 LEs               ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mtval[18]                                                                              ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|imm_o[14]                                                                                  ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|trap_ctrl.cause[0]                                                                         ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[15]                                                                              ;
+; 11:1               ; 9 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[29]                                                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[24]                                                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.rdata[30]                                                                              ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Mux76                                                                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|trap_ctrl.env_call                                                                         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|opa_addr[1]                                                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|cnt.we_lo[0]                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|cnt.we_hi[0]                                                                               ;
+; 11:1               ; 31 bits   ; 217 LEs       ; 186 LEs              ; 31 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst|Mux15                                                                                      ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|res_o[23]        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |neorv32_top|neorv32_busswitch:neorv32_core_busswitch_inst|Selector1                                                                                                              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |neorv32_top|neorv32_busswitch:neorv32_core_busswitch_inst|Selector0                                                                                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector71                                                                                 ;
+; 13:1               ; 3 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector75                                                                                 ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 4 LEs                ; 14 LEs                 ; No         ; |neorv32_top|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|Selector70                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -887,7 +886,7 @@ Encoding Type:  One-Hot
 ; XIRQ_NUM_CH                  ; 4                                ; Signed Integer  ;
 ; XIRQ_TRIGGER_TYPE            ; 11111111111111111111111111111111 ; Unsigned Binary ;
 ; XIRQ_TRIGGER_POLARITY        ; 00000000000000000000000000000000 ; Unsigned Binary ;
-; IO_GPIO_NUM                  ; 8                                ; Signed Integer  ;
+; IO_GPIO_NUM                  ; 64                               ; Signed Integer  ;
 ; IO_MTIME_EN                  ; true                             ; Enumerated      ;
 ; IO_UART0_EN                  ; true                             ; Enumerated      ;
 ; IO_UART0_RX_FIFO             ; 1                                ; Signed Integer  ;
@@ -1256,7 +1255,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                       ;
 +----------------+-------+----------------------------------------------------------------------------+
-; gpio_num       ; 8     ; Signed Integer                                                             ;
+; gpio_num       ; 64    ; Signed Integer                                                             ;
 +----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1334,7 +1333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; mem_ext_en           ; false                            ; Enumerated              ;
 ; mem_ext_big_endian   ; false                            ; Enumerated              ;
 ; on_chip_debugger_en  ; false                            ; Enumerated              ;
-; io_gpio_num          ; 8                                ; Signed Integer          ;
+; io_gpio_num          ; 64                               ; Signed Integer          ;
 ; io_mtime_en          ; true                             ; Enumerated              ;
 ; io_uart0_en          ; true                             ; Enumerated              ;
 ; io_uart1_en          ; false                            ; Enumerated              ;
@@ -2096,7 +2095,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon May 22 20:35:06 2023
+    Info: Processing started: Tue May 30 00:17:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nerrv32 -c nerrv32
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 0 entities, in source file mem/neorv32_imem.default.vhd
@@ -2566,62 +2565,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "xip_csn_o" is stuck at VCC
     Warning (13410): Pin "xip_clk_o" is stuck at GND
     Warning (13410): Pin "xip_dat_o" is stuck at GND
-    Warning (13410): Pin "gpio_o[8]" is stuck at GND
-    Warning (13410): Pin "gpio_o[9]" is stuck at GND
-    Warning (13410): Pin "gpio_o[10]" is stuck at GND
-    Warning (13410): Pin "gpio_o[11]" is stuck at GND
-    Warning (13410): Pin "gpio_o[12]" is stuck at GND
-    Warning (13410): Pin "gpio_o[13]" is stuck at GND
-    Warning (13410): Pin "gpio_o[14]" is stuck at GND
-    Warning (13410): Pin "gpio_o[15]" is stuck at GND
-    Warning (13410): Pin "gpio_o[16]" is stuck at GND
-    Warning (13410): Pin "gpio_o[17]" is stuck at GND
-    Warning (13410): Pin "gpio_o[18]" is stuck at GND
-    Warning (13410): Pin "gpio_o[19]" is stuck at GND
-    Warning (13410): Pin "gpio_o[20]" is stuck at GND
-    Warning (13410): Pin "gpio_o[21]" is stuck at GND
-    Warning (13410): Pin "gpio_o[22]" is stuck at GND
-    Warning (13410): Pin "gpio_o[23]" is stuck at GND
-    Warning (13410): Pin "gpio_o[24]" is stuck at GND
-    Warning (13410): Pin "gpio_o[25]" is stuck at GND
-    Warning (13410): Pin "gpio_o[26]" is stuck at GND
-    Warning (13410): Pin "gpio_o[27]" is stuck at GND
-    Warning (13410): Pin "gpio_o[28]" is stuck at GND
-    Warning (13410): Pin "gpio_o[29]" is stuck at GND
-    Warning (13410): Pin "gpio_o[30]" is stuck at GND
-    Warning (13410): Pin "gpio_o[31]" is stuck at GND
-    Warning (13410): Pin "gpio_o[32]" is stuck at GND
-    Warning (13410): Pin "gpio_o[33]" is stuck at GND
-    Warning (13410): Pin "gpio_o[34]" is stuck at GND
-    Warning (13410): Pin "gpio_o[35]" is stuck at GND
-    Warning (13410): Pin "gpio_o[36]" is stuck at GND
-    Warning (13410): Pin "gpio_o[37]" is stuck at GND
-    Warning (13410): Pin "gpio_o[38]" is stuck at GND
-    Warning (13410): Pin "gpio_o[39]" is stuck at GND
-    Warning (13410): Pin "gpio_o[40]" is stuck at GND
-    Warning (13410): Pin "gpio_o[41]" is stuck at GND
-    Warning (13410): Pin "gpio_o[42]" is stuck at GND
-    Warning (13410): Pin "gpio_o[43]" is stuck at GND
-    Warning (13410): Pin "gpio_o[44]" is stuck at GND
-    Warning (13410): Pin "gpio_o[45]" is stuck at GND
-    Warning (13410): Pin "gpio_o[46]" is stuck at GND
-    Warning (13410): Pin "gpio_o[47]" is stuck at GND
-    Warning (13410): Pin "gpio_o[48]" is stuck at GND
-    Warning (13410): Pin "gpio_o[49]" is stuck at GND
-    Warning (13410): Pin "gpio_o[50]" is stuck at GND
-    Warning (13410): Pin "gpio_o[51]" is stuck at GND
-    Warning (13410): Pin "gpio_o[52]" is stuck at GND
-    Warning (13410): Pin "gpio_o[53]" is stuck at GND
-    Warning (13410): Pin "gpio_o[54]" is stuck at GND
-    Warning (13410): Pin "gpio_o[55]" is stuck at GND
-    Warning (13410): Pin "gpio_o[56]" is stuck at GND
-    Warning (13410): Pin "gpio_o[57]" is stuck at GND
-    Warning (13410): Pin "gpio_o[58]" is stuck at GND
-    Warning (13410): Pin "gpio_o[59]" is stuck at GND
-    Warning (13410): Pin "gpio_o[60]" is stuck at GND
-    Warning (13410): Pin "gpio_o[61]" is stuck at GND
-    Warning (13410): Pin "gpio_o[62]" is stuck at GND
-    Warning (13410): Pin "gpio_o[63]" is stuck at GND
     Warning (13410): Pin "uart1_txd_o" is stuck at GND
     Warning (13410): Pin "uart1_rts_o" is stuck at VCC
     Warning (13410): Pin "spi_clk_o" is stuck at GND
@@ -2687,7 +2630,7 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 31 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 164 input pin(s) that do not drive logic
+Warning (21074): Design contains 108 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "jtag_trst_i"
     Warning (15610): No output dependent on input pin "jtag_tck_i"
     Warning (15610): No output dependent on input pin "jtag_tms_i"
@@ -2726,62 +2669,6 @@ Warning (21074): Design contains 164 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "wb_ack_i"
     Warning (15610): No output dependent on input pin "wb_err_i"
     Warning (15610): No output dependent on input pin "xip_dat_i"
-    Warning (15610): No output dependent on input pin "gpio_i[8]"
-    Warning (15610): No output dependent on input pin "gpio_i[9]"
-    Warning (15610): No output dependent on input pin "gpio_i[10]"
-    Warning (15610): No output dependent on input pin "gpio_i[11]"
-    Warning (15610): No output dependent on input pin "gpio_i[12]"
-    Warning (15610): No output dependent on input pin "gpio_i[13]"
-    Warning (15610): No output dependent on input pin "gpio_i[14]"
-    Warning (15610): No output dependent on input pin "gpio_i[15]"
-    Warning (15610): No output dependent on input pin "gpio_i[16]"
-    Warning (15610): No output dependent on input pin "gpio_i[17]"
-    Warning (15610): No output dependent on input pin "gpio_i[18]"
-    Warning (15610): No output dependent on input pin "gpio_i[19]"
-    Warning (15610): No output dependent on input pin "gpio_i[20]"
-    Warning (15610): No output dependent on input pin "gpio_i[21]"
-    Warning (15610): No output dependent on input pin "gpio_i[22]"
-    Warning (15610): No output dependent on input pin "gpio_i[23]"
-    Warning (15610): No output dependent on input pin "gpio_i[24]"
-    Warning (15610): No output dependent on input pin "gpio_i[25]"
-    Warning (15610): No output dependent on input pin "gpio_i[26]"
-    Warning (15610): No output dependent on input pin "gpio_i[27]"
-    Warning (15610): No output dependent on input pin "gpio_i[28]"
-    Warning (15610): No output dependent on input pin "gpio_i[29]"
-    Warning (15610): No output dependent on input pin "gpio_i[30]"
-    Warning (15610): No output dependent on input pin "gpio_i[31]"
-    Warning (15610): No output dependent on input pin "gpio_i[32]"
-    Warning (15610): No output dependent on input pin "gpio_i[33]"
-    Warning (15610): No output dependent on input pin "gpio_i[34]"
-    Warning (15610): No output dependent on input pin "gpio_i[35]"
-    Warning (15610): No output dependent on input pin "gpio_i[36]"
-    Warning (15610): No output dependent on input pin "gpio_i[37]"
-    Warning (15610): No output dependent on input pin "gpio_i[38]"
-    Warning (15610): No output dependent on input pin "gpio_i[39]"
-    Warning (15610): No output dependent on input pin "gpio_i[40]"
-    Warning (15610): No output dependent on input pin "gpio_i[41]"
-    Warning (15610): No output dependent on input pin "gpio_i[42]"
-    Warning (15610): No output dependent on input pin "gpio_i[43]"
-    Warning (15610): No output dependent on input pin "gpio_i[44]"
-    Warning (15610): No output dependent on input pin "gpio_i[45]"
-    Warning (15610): No output dependent on input pin "gpio_i[46]"
-    Warning (15610): No output dependent on input pin "gpio_i[47]"
-    Warning (15610): No output dependent on input pin "gpio_i[48]"
-    Warning (15610): No output dependent on input pin "gpio_i[49]"
-    Warning (15610): No output dependent on input pin "gpio_i[50]"
-    Warning (15610): No output dependent on input pin "gpio_i[51]"
-    Warning (15610): No output dependent on input pin "gpio_i[52]"
-    Warning (15610): No output dependent on input pin "gpio_i[53]"
-    Warning (15610): No output dependent on input pin "gpio_i[54]"
-    Warning (15610): No output dependent on input pin "gpio_i[55]"
-    Warning (15610): No output dependent on input pin "gpio_i[56]"
-    Warning (15610): No output dependent on input pin "gpio_i[57]"
-    Warning (15610): No output dependent on input pin "gpio_i[58]"
-    Warning (15610): No output dependent on input pin "gpio_i[59]"
-    Warning (15610): No output dependent on input pin "gpio_i[60]"
-    Warning (15610): No output dependent on input pin "gpio_i[61]"
-    Warning (15610): No output dependent on input pin "gpio_i[62]"
-    Warning (15610): No output dependent on input pin "gpio_i[63]"
     Warning (15610): No output dependent on input pin "uart1_rxd_i"
     Warning (15610): No output dependent on input pin "uart1_cts_i"
     Warning (15610): No output dependent on input pin "spi_dat_i"
@@ -2852,15 +2739,15 @@ Warning (21074): Design contains 164 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "xirq_i[30]"
     Warning (15610): No output dependent on input pin "xirq_i[31]"
     Warning (15610): No output dependent on input pin "mtime_irq_i"
-Info (21057): Implemented 3936 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4151 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 183 input pins
     Info (21059): Implemented 207 output pins
-    Info (21061): Implemented 3386 logic cells
+    Info (21061): Implemented 3601 logic cells
     Info (21064): Implemented 160 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 395 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Mon May 22 20:35:15 2023
-    Info: Elapsed time: 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 283 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Tue May 30 00:17:59 2023
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 

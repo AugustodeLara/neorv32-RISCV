@@ -48,6 +48,12 @@
  *
  * @return Will never return.
  **************************************************************************/
+
+// en gpio 55
+// rw gpio 56
+// rs gpio 57
+// on gpio 58
+
 int main() {
 
   // clear GPIO output (set all bits to 0)
@@ -57,7 +63,21 @@ int main() {
 
   while (1) {
     neorv32_gpio_port_set(cnt++ & 0xFF); // increment counter and mask for lowest 8 bit
-    neorv32_cpu_delay_ms(250); // wait 250ms using busy wait
+    neorv32_gpio_port_set(0x0400000000000000); // rs = 0 and rw = 0
+    neorv32_gpio_port_set(0x041C000000000000);   // 2 linhas, ...
+
+    neorv32_gpio_port_set(0x049C000000000000);   // EN = 1
+    neorv32_cpu_delay_ms(100);
+    neorv32_gpio_port_set(0x041C000000000000);    // en = 0 
+
+
+    neorv32_gpio_port_set(0x0487800000000000);   // 63 62 61 60    59 58 57 56     55 54 53 52    51 50 49 48   47
+    neorv32_gpio_port_set(0x0407800000000000);   // 0  0  0  0     0  1  0  0      1  0  0   0     0  1  1  1    1
+neorv32_cpu_delay_ms(100);
+    neorv32_gpio_port_set(0x0487800000000000);
+                                             // 0  0  0  0     0  1  0  0      0  0  0   1     1  1  0  0    0
+    neorv32_cpu_delay_ms(1000); // wait 250ms using busy wait
+    neorv32_gpio_pin_clr(0);
   }
 
   // this should never be reached

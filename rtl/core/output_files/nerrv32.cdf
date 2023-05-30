@@ -1,4 +1,4 @@
-/* Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition */
+/* Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
