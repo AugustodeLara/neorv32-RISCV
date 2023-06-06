@@ -1,0 +1,174 @@
+%
+% examples.tex
+%
+% Copyright (C) 2023 UFSC.
+%
+% DOCUMENTATION-TEMPLATE
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+% International License. To view a copy of this license,
+% visit http://creativecommons.org/licenses/by-sa/4.0/.
+%
+
+
+\chapter{C Programming for Begginers}
+
+    \section{Include Statements}
+        These statements are used to introduce the contents of a separate file into your source file. This is a handy way to keep your code organized, and it also allows you to use library functionality, hardware-configuration routines, and register definitions provided by the manufacturer.
+    
+            \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+            //-------------------------------------------------------------
+            // Includes
+            //-------------------------------------------------------------
+            #include // SFR declarations
+            #include Project_DefsVarsFuncs.h
+            #include InitDevice.h
+            #include cslib_config.h
+            #include cslib.h
+            \end{lstlisting}
+
+\section{Preprocessor Definitions}
+
+    You can use a \#define statement to create a string that will be replaced by a number. Preprocessor definitions are not necessary, but in some situations they are extremely helpful because they allow you to easily modify a value that appears in various different portions of your program.
+    
+    
+    For example, let’s say that you’re using the microcontroller’s ADC and that your code uses the ADC’s sample rate in several separate calculations. A preprocessor definition allows you to use an intuitive string (such as SAMPLE\_RATE) instead of the number itself in the calculation code, and if you’re experimenting with different sample rates, you only need to change the one numerical value in the preprocessor definition.
+    
+        \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+            #define SAMPLE_RATE 100000
+        \end{lstlisting}
+        
+    You can change 100000 to any other number, and this new number will be used to replace all instances of the string SAMPLE\_RATE.
+
+    Preprocessor definitions are also a great way to make code more readable. The following is a list of handy \#define statements.
+     
+        \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+        #define BIT7 0x80
+        #define BIT6 0x40
+        #define BIT5 0x20
+        #define BIT4 0x10
+        #define BIT3 0x08
+        #define BIT2 0x04
+        #define BIT1 0x02 
+        #define BIT0 0x01
+        
+        #define HIGH 1
+        #define LOW 0
+        
+        #define TRUE 1
+        #define FALSE 0
+        
+        #define SET 1
+        #define CLEARED 0
+        
+        #define LOWBYTE(v)   ((unsigned char) (v))
+        #define HIGHBYTE(v)  ((unsigned char) (((unsigned int) (v)) >> 8))
+        \end{lstlisting}
+
+    Its important to understand that preprocessor definitions have no direct relationship to hardware. You’re just telling the preprocessor to replace one string of characters with another string of characters before the program is compiled.
+    
+        \subsection{Variables}
+            Processors store data in registers and memory locations. There really is no such thing as a variable as far as the hardware is concerned. For the programmer, though, writing code is much easier when we can use intuitively named variables instead of memory addresses or register numbers.
+            
+            Compilers can manage the low-level details associated with variables without much input from the programmer, but if you want to optimize your use of variables you'll need to know something about the device’s memory configuration and the way in which it handles data of different bit widths.
+            
+            The following code excerpt gives an example of variable definition. This was written for the Keil Cx51 compiler, which reserves one byte of memory for an “unsigned char” definition, two bytes for an “unsigned int” definition, and four bytes for an “unsigned long” definition.
+            
+                 
+                \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+                unsigned long Accumulated_Capacitance_Sensor1;
+                unsigned long Accumulated_Capacitance_Sensor2;
+                
+                unsigned int Sensor1_Unpressed;
+                unsigned int Sensor2_Unpressed;
+                
+                unsigned int Sensor1_Measurement;
+                unsigned int Sensor2_Measurement;
+                
+                unsigned int AngularPosition;
+                
+                unsigned int TouchDuration;
+                
+                unsigned char CurrentDigit;
+                unsigned int CharacterEntry;
+                unsigned char DisplayDivider;
+                \end{lstlisting}
+                
+
+        \subsection{Operators, Conditional Statements, and Loops} 
+        
+            The core of computational functionality consists of moving data, performing mathematical computations and logical operations with data, and making programmatic decisions based on the value of stored or generated data.
+            
+            Mathematical operations and bit manipulation are accomplished by means of operators. C has quite a few operators: equals (=), addition (+), subtraction (-), multiplication (*), division (/), bitwise AND (\&), bitwise OR (|), and so forth. The ``input'' to an operator statement are variables or constants, and the result is stored in a variable.
+            
+            Conditional statements allow you to perform or not perform an action based on whether a given condition is true or false. These statements use the words “if” and “else”; for example:
+            
+                \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+                if(Sensor1 < Sensor2 && Sensor1 < Sensor3)
+                return SENSOR_1;
+                
+                else if(Sensor2 < Sensor1 && Sensor2 < Sensor3)
+                return SENSOR_2;
+                
+                else if(Sensor3 < Sensor2 && Sensor3 < Sensor1)
+                return SENSOR_3;
+                
+                else
+                return 0;
+                \end{lstlisting} 
+
+            For loops and while loops provide a convenient means of repeatedly executing a block of code. These types of tasks arise very frequently in embedded applications. For loops are more oriented toward situations in which a block of code must be executed a specific number of times, and while loops are handy when the processor should continue repeating the same block of code until a condition changes from true to false. Here are examples of both types.
+
+                \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+                for (n = 0; n < 16; n++)
+                {
+                Accumulated_Capacitance_Sensor1 += Measure_Capacitance(SENSOR_1);
+                Delay_us(50);
+                Accumulated_Capacitance_Sensor2 += Measure_Capacitance(SENSOR_2);
+                Delay_us(50);
+                }
+                
+                while(CONVERSION_DONE == FALSE);
+                {
+                LED_STATE = !LED_STATE;
+                Delay_ms(100);
+                }
+                \end{lstlisting}
+                
+        \subsection{Functions} 
+
+            Good C code is vastly superior to assembly code in terms of organization and readability, and this is due in large part to the use of functions.
+            
+            Functions are blocks of code that can be easily incorporated into other portions of code. Causing the processor to execute the instructions contained in the function is referred to as “calling” the function. A function can accept one or multiple inputs, and it can provide one output, called a return value.
+            
+            The use of functions does involve some overhead, so we have to be careful to not burden the processor with an excessive number of function calls, but in general the benefits of functions far outweigh the costs.
+            
+            Here is an example of a function that has three numerical inputs and uses these inputs to generate a true-or-false return value.
+            
+                \begin{lstlisting}[backgroundcolor = \color{lightgray}, language=c]
+                bit Is_In_Range(int input, int LowerBound, int UpperBound)
+                {
+                if(input >= LowerBound && input <= UpperBound)
+                  return TRUE;
+                
+                 else
+                  return FALSE;
+                }
+                \end{lstlisting}
+    
+\chapter{Some examples}
+
+    \section{GPIO}
+    
+    \section{7-segment Display}
+    
+    \section{LCD Display}
+    
+    \section{Interrupts}
+    
+    \section{Timer/Counter}
+    
+    \section{Serial UART}
+    
+    
+

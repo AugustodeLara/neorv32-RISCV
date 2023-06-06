@@ -13,6 +13,9 @@
 \documentclass[a4paper,12pt]{book}
 
 \usepackage{book}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
 
 \title{RISC-V: An approach for learning the architecture}
 \author{SpaceLab}
@@ -22,10 +25,19 @@
 \hypersetup
 {
   pdfauthor   = {SpaceLab},
-    pdfsubject  = {\thetitle},
-    pdftitle    = {\thetitle},
-   pdfkeywords = {Nanosatellites, CubeSats}
-}
+  pdfsubject  = {\thetitle},
+  pdftitle    = {\thetitle},
+  pdfkeywords = {Nanosatellites, CubeSats},
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue,
+  citecolor=black
+  }
+
+\usepackage{soul}
+
+\sethlcolor{lightgray}
+
 
 \begin{document}
 
@@ -53,8 +65,9 @@
     \setcounter{page}{1}
 
     \input{chapters/introduction}
-    \input{chapters/cmocka_api}
-    \input{}
+    \input{chapters/programing}
+    \input{chapters/examples}
     \input{chapters/references}
+    \input{appendices/appendices}
 
 \end{document}

@@ -1,0 +1,140 @@
+%
+% fpga_output_gpio.tex
+%
+% Copyright (C) 2023 UFSC.
+%
+% DOCUMENTATION-TEMPLATE
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+% International License. To view a copy of this license,
+% visit http://creativecommons.org/licenses/by-sa/4.0/.
+%
+
+
+\chapter{FPGA Output GPIO Pinout}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{GPIO\_o}  \\
+          
+        \midrule
+               & \quad \quad 0 & \quad \quad PIN\_AA25 & \quad \quad LEDG [0]\\
+               & \quad \quad 1 & \quad \quad PIN\_AB25 & \quad \quad LEDG [1]\\
+               & \quad \quad 2 & \quad \quad PIN\_F27  & \quad \quad LEDG [2]\\
+        LEDG   & \quad \quad 3 & \quad \quad PIN\_F26  & \quad \quad LEDG [3]\\        
+               & \quad \quad 4 & \quad \quad PIN\_W26  & \quad \quad LEDG [4]\\
+               & \quad \quad 5 & \quad \quad PIN\_Y22  & \quad \quad LEDG [5]\\
+               & \quad \quad 6 & \quad \quad PIN\_Y25  & \quad \quad LEDG [6]\\
+               & \quad \quad 7 & \quad \quad PIN\_AA22 & \quad \quad LEDG [7]\\
+            \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:ledg} Green LEDs (output GPIO) pinout}
+\end{table}
+
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{GPIO\_o}  \\
+        
+               & \quad \quad 8  & \quad \quad PIN\_T23 & \quad \quad LEDR [0]\\
+               & \quad \quad 9  & \quad \quad PIN\_T24 & \quad \quad LEDR [1]\\
+               & \quad \quad 10 & \quad \quad PIN\_V27 & \quad \quad LEDR [2]\\
+        LEDR   & \quad \quad 11 & \quad \quad PIN\_W25 & \quad \quad LEDR [3]\\        
+               & \quad \quad 12 & \quad \quad PIN\_T21 & \quad \quad LEDR [4]\\
+               & \quad \quad 13 & \quad \quad PIN\_T26 & \quad \quad LEDR [5]\\
+               & \quad \quad 14 & \quad \quad PIN\_R25 & \quad \quad LEDR [6]\\
+               & \quad \quad 15 & \quad \quad PIN\_T27 & \quad \quad LEDR [7]\\
+
+    \end{tabular}
+    \caption{\label{tab:ledr}Red LEDs (output GPIO) pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering 
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{GPIO\_o}  \\
+
+               & \quad \quad 16 & \quad \quad PIN\_E15 & \quad \quad HEX0 [0]\\
+               & \quad \quad 17 & \quad \quad PIN\_E12 & \quad \quad HEX0 [1]\\
+               & \quad \quad 18 & \quad \quad PIN\_G11 & \quad \quad HEX0 [2]\\
+        HEX0   & \quad \quad 19 & \quad \quad PIN\_F11 & \quad \quad HEX0 [3]\\        
+               & \quad \quad 20 & \quad \quad PIN\_F16 & \quad \quad HEX0 [4]\\
+               & \quad \quad 21 & \quad \quad PIN\_D16 & \quad \quad HEX0 [5]\\
+               & \quad \quad 22 & \quad \quad PIN\_F14 & \quad \quad HEX0 [6]\\
+        \hline
+               & \quad \quad 23 & \quad \quad PIN\_G14 & \quad \quad HEX1 [0]\\
+               & \quad \quad 24 & \quad \quad PIN\_B13 & \quad \quad HEX1 [1]\\
+               & \quad \quad 25 & \quad \quad PIN\_G13 & \quad \quad HEX1 [2]\\
+        HEX1   & \quad \quad 26 & \quad \quad PIN\_F12 & \quad \quad HEX1 [3]\\        
+               & \quad \quad 27 & \quad \quad PIN\_G12 & \quad \quad HEX1 [4]\\
+               & \quad \quad 28 & \quad \quad PIN\_J9  & \quad \quad HEX1 [5]\\
+               & \quad \quad 29 & \quad \quad PIN\_G10 & \quad \quad HEX1 [6]\\    
+        \hline
+               & \quad \quad 30 & \quad \quad PIN\_G8   & \quad \quad HEX2 [0]\\
+               & \quad \quad 31 & \quad \quad PIN\_G7   & \quad \quad HEX2 [1]\\
+               & \quad \quad 32 & \quad \quad PIN\_F7   & \quad \quad HEX2 [2]\\
+        HEX2   & \quad \quad 33 & \quad \quad PIN\_AG30 & \quad \quad HEX2 [3]\\        
+               & \quad \quad 34 & \quad \quad PIN\_F6   & \quad \quad HEX2 [4]\\
+               & \quad \quad 35 & \quad \quad PIN\_F4    & \quad \quad HEX2 [5]\\
+               & \quad \quad 36 & \quad \quad PIN\_F10  & \quad \quad HEX2 [6]\\  
+        \hline
+               & \quad \quad 37 & \quad \quad PIN\_D10 & \quad \quad HEX3 [0]\\
+               & \quad \quad 38 & \quad \quad PIN\_D7  & \quad \quad HEX3 [1]\\
+               & \quad \quad 39 & \quad \quad PIN\_E6  & \quad \quad HEX3 [2]\\
+        HEX3   & \quad \quad 40 & \quad \quad PIN\_E4  & \quad \quad HEX3 [3]\\        
+               & \quad \quad 41 & \quad \quad PIN\_E3  & \quad \quad HEX3 [4]\\
+               & \quad \quad 42 & \quad \quad PIN\_D5  & \quad \quad HEX3 [5]\\
+               & \quad \quad 43 & \quad \quad PIN\_D4  & \quad \quad HEX3 [6]\\
+               
+        
+    \end{tabular}
+    \caption{\label{tab:hex}7-segments display (output GPIO) pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{GPIO\_o}  \\
+        
+               & \quad \quad 44 & \quad \quad & \quad \quad\\
+               & \quad \quad 45 & \quad \quad & \quad \quad\\
+               & \quad \quad 46 & \quad \quad & \quad \quad\\
+               & \quad \quad 47 & \quad \quad & \quad \quad\\        
+               & \quad \quad 48 & \quad \quad & \quad \quad\\
+               & \quad \quad 49 & \quad \quad & \quad \quad\\
+               & \quad \quad 50 & \quad \quad & \quad \quad\\
+               & \quad \quad 50 & \quad \quad & \quad \quad\\
+        \bottomrule[1.5pt] 
+    \end{tabular}
+    \caption{\label{tab:empty}Available (output GPIO) pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{GPIO\_o}  \\
+        
+               & \quad \quad 52 & \quad \quad PIN\_AG4 & \quad \quad DATA [0]\\
+               & \quad \quad 53 & \quad \quad PIN\_AF3 & \quad \quad DATA [1]\\
+               & \quad \quad 54 & \quad \quad PIN\_AH3 & \quad \quad DATA [2]\\
+               & \quad \quad 55 & \quad \quad PIN\_AE5 & \quad \quad DATA [3]\\        
+               & \quad \quad 56 & \quad \quad PIN\_AH2 & \quad \quad DATA [4]\\
+               & \quad \quad 57 & \quad \quad PIN\_AE3 & \quad \quad DATA [5]\\
+        LCD    & \quad \quad 58 & \quad \quad PIN\_AH4 & \quad \quad DATA [6]\\  
+               & \quad \quad 59 & \quad \quad PIN\_AE4 & \quad \quad DATA [7]\\ 
+               & \quad \quad 60 & \quad \quad PIN\_AF4 & \quad \quad EN\\
+               & \quad \quad 61 & \quad \quad PIN\_AJ3 & \quad \quad RW\\
+               & \quad \quad 59 & \quad \quad PIN\_AG3 & \quad \quad RS\\
+               & \quad \quad 59 & \quad \quad PIN\_AF27 & \quad \quad ON\\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{\label{tab:lcd}LCD display (output GPIO) pinout}
+\end{table}
