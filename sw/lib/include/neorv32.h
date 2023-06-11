@@ -237,6 +237,8 @@ enum NEORV32_CLOCK_PRSC_enum {
 #include "neorv32_dm.h"
 #include "neorv32_dma.h"
 #include "neorv32_gpio.h"
+#include "neorv32_lcd.h"
+#include "neorv32_display.h"
 #include "neorv32_gptmr.h"
 #include "neorv32_mtime.h"
 #include "neorv32_neoled.h"
