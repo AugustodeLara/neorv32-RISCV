@@ -1,6 +1,6 @@
 /**********************************************************************//**
- * @file neorv32_lcd.c
- * @brief Liquid Crystal Display (LCD) HW driver source file.
+ * @file neorv32_display.c
+ * @brief 7-Segment Display HW driver source file.
  *
  * @note These functions should only be used if the GPIO unit was synthesized (IO_GPIO_EN = true).
  **************************************************************************/
@@ -21,9 +21,9 @@ void neorv32_display_clear(int channel){
 }
 
 /**********************************************************************//**
- * @brief Write a sentence in the display.
+ * @brief Converting the character to a binary value, to display into the 7-segment display
  *
- * @param[in] message is the sentence to be written to the display.
+ * @param[in] value is the character to be written to the display.
  **************************************************************************/
 uint8_t neorv32_display_convert(const char *value){
 
@@ -151,9 +151,9 @@ uint8_t neorv32_display_convert(const char *value){
 
 
 /**********************************************************************//**
- * @brief Write a sentence in the display.
+ * @brief Write a character in the display.
  *
- * @param[in] message is the sentence to be written to the display.
+ * @param[in] value is the character to be written to the display.
  **************************************************************************/
 void neorv32_display_write(int channel, const char *value){
     
