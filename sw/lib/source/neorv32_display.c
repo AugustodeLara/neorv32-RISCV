@@ -25,128 +25,128 @@ void neorv32_display_clear(int channel){
  *
  * @param[in] value is the character to be written to the display.
  **************************************************************************/
-uint8_t neorv32_display_convert(const char *value){
+uint8_t neorv32_display_convert(char *value){
 
     uint8_t p = 0;
 
-    switch((int)value){
-        case (int)'0':
+    switch(*value){
+        case '0':
             p = 0b0111111; // "0"          
             break;
-        case (int)'1':
+        case '1':
             p = 0b0000110; // "1"
             break;         
-        case (int)'2':
+        case '2':
             p = 0b1011011; // "2"
             break;         
-        case (int)'3':
+        case '3':
             p = 0b1001111; // "3"         
             break;
-        case (int)'4':
+        case '4':
             p = 0b1100110; // "4"         
             break;
-        case (int)'5':
+        case '5':
             p = 0b1101101; // "5"         
             break;
-        case (int)'6':
+        case '6':
             p = 0b1111101; // "6"        
             break;
-        case (int)'7':
+        case '7':
             p = 0b0000111; // "7"
             break;
-        case (int)'8':
+        case '8':
             p = 0b1111111; // "8"
             break;
-        case (int)'9':
+        case '9':
             p = 0b1101111; // "9"
             break;
-        case (int)'A':
+        case 'A':
             p = 0b1110111; // 'A'
             break;
-        case (int)'B':
+        case 'B':
             p = 0b1111100; // 'b'
             break;
-        case (int)'C':
+        case 'C':
             p = 0b0111001; // 'C'
             break;
-        case (int)'D':
+        case 'D':
             p = 0b1011110; // 'd'
             break;
-        case (int)'E':
+        case 'E':
             p = 0b1111001; // 'E'
             break;
-        case (int)'F':
+        case 'F':
             p = 0b1110001; // 'F'
             break;
-        case (int)'G':
+        case 'G':
             p = 0b0111101; // 'G'
             break;
-        case (int)'H':
+        case 'H':
             p = 0b1110110; // 'H'
             break;
-        case (int)'I':
+        case 'I':
             p = 0b0000110; // 'I'
             break;
-        case (int)'J':
+        case 'J':
             p = 0b0001110; // 'J'
             break;
-        case (int)'K':
+        case 'K':
             p = 0b1110110; // 'K'  (same as 'H')
             break;
-        case (int)'L':
+        case 'L':
             p = 0b0111000; // 'L'
             break;
-        case (int)'M':
+        case 'M':
             p = 0b0000000; // 'M'  (no display)
             break;
-        case (int)'N':
+        case 'N':
             p = 0b1010100; // 'n'
             break;
-        case (int)'O':
+        case 'O':
             p = 0b0111111; // 'O'
             break;
-        case (int)'P':
+        case 'P':
             p = 0b1110011; // 'P'
             break;
-        case (int)'Q':
+        case 'Q':
             p = 0b1100111; // 'q'
             break;
-        case (int)'R':
+        case 'R':
             p = 0b1010000; // 'r'
             break;
-        case (int)'S':
+        case 'S':
             p = 0b1101101; // 'S'
             break;
-        case (int)'T':
+        case 'T':
             p = 0b1111000; // 't'
             break;
-        case (int)'U':
+        case 'U':
             p = 0b0111110; // 'U'
             break;
-        case (int)'V':
+        case 'V':
             p = 0b0111110; // 'V'  (same as 'U')
             break;
-        case (int)'W':
+        case 'W':
             p = 0b0000000; // 'W'  (no display)
             break;
-        case (int)'X':
+        case 'X':
             p = 0b1110110; // 'X'  (same as 'H')
             break;
-        case (int)'Y':
+        case 'Y':
             p = 0b1101110; // 'y'
             break;
-        case (int)'Z':
+        case 'Z':
             p = 0b1011011; // 'Z'  (same as '2')
             break;
-        case (int)' ':
+        case ' ':
             p = 0b0000000; // ' '  (blank)
             break;
-        case (int)'-':
+        case '-':
             p = 0b1000000; // 37  '-'  
             break;
     };
 
-    return p;
+    return ~p;
 }
 
 
@@ -155,7 +155,7 @@ uint8_t neorv32_display_convert(const char *value){
  *
  * @param[in] value is the character to be written to the display.
  **************************************************************************/
-void neorv32_display_write(int channel, const char *value){
+void neorv32_display_write(int channel, char *value){
     
-    neorv32_gpio_port_set((uint64_t)(!neorv32_display_convert(value)) <<  channel);
+    neorv32_gpio_port_set((uint64_t)neorv32_display_convert(value) <<  channel);
 }

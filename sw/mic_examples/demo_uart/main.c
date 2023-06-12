@@ -22,7 +22,7 @@ void uart_irq_handler(void);
  ***************************************************************/
 int main() {
 
-    neorv32_gpio_port_set(0x00000FFFFFFF0000); // clear all GPIOs pins
+    char buffer[50]; // buffer for the received message
 
     // initialize the UART with default baud rate
     neorv32_uart0_setup(BAUD_RATE, 0);
@@ -35,32 +35,26 @@ int main() {
         neorv32_gpio_pin_set(0x01);
     }
 
-    // install handler functions for UART
-    if (neorv32_rte_handler_install(RTE_TRAP_FIRQ_3, uart_irq_handler) != 0) {
-        neorv32_gpio_port_set(0x02);
-    }
 
-    // go to sleep mode
     while(1) {
-        neorv32_cpu_sleep();
+        // send a message for the user and waits for a response
+        neorv32_uart0_printf("Hi! \n");
+        neorv32_uart0_scan(buffer, 50, 1);
+        neorv32_uart0_printf("\n");
+
+        // compares the response with the expected one
+        if (!strcmp(buffer, "Are you alright?")) {
+            neorv32_uart0_printf("\n I'm alive! \n");
+            neorv32_uart0_printf("=) \n");
+            neorv32_uart0_printf("NEORV32 left the conversation... \n");
+        }
+
+        // go to sleep mode
+        // but you could remove it, to start a new interaction
+        while(1) {
+            neorv32_cpu_sleep();
+        }
     }
 
     return 0; // this should never be reached
-}
-
-
-/************************************************************//**
- * @brief UART IRQ handler.
- ***************************************************************/
-void uart_irq_handler(void) {
-    char tmp;
-
-    // Check if the received character matches the interrupt character
-    if (neorv32_uart0_char_received()) {
-        tmp = neorv32_uart0_char_received_get();
-        if (strcmp(&tmp, "Are you alright?")){
-            // Print a message when the interrupt character is received
-            neorv32_uart0_printf("I'm alive!");    
-        }
-    }        
 }
