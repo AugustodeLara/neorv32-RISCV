@@ -6,10 +6,20 @@
 #include <neorv32.h>
 
 // defines
-#define DELAY_S 10
+#define DELAY_S 1
 
-// prototypes
-void mtime_irq_handler(void);
+/************************************************************//**
+ * @brief MTIME IRQ handler.
+ ***************************************************************/
+void mtime_irq_handler(void) {
+    static int cnt = 0; // counter
+
+    // update the time for the next interrupt
+    neorv32_mtime_set_timecmp(neorv32_mtime_get_timecmp() + DELAY_S*(NEORV32_SYSINFO->CLK / 2));
+
+    // increment counter and mask for lowest 8 bits
+	neorv32_gpio_port_set((cnt++ & 0xFF)<<9); 
+}
 
 /************************************************************//**
  * @brief increments a 8-bit counter on LEDR[7..0] using the machine timer interrupt.
@@ -19,8 +29,6 @@ void mtime_irq_handler(void);
  * @return Will never return.
  ***************************************************************/
 int main() {
-
-    neorv32_gpio_port_set(0x00000FFFFFFF0000); // clear all GPIOs pins
 
     // initialize the runtime environment, to handling all CPU's traps
     neorv32_rte_setup();
@@ -32,7 +40,7 @@ int main() {
 
     // install handler functions for MTIME 
     if (neorv32_rte_handler_install(RTE_TRAP_MTI, mtime_irq_handler) != 0) {
-        neorv32_gpio_port_set(0x02);
+        neorv32_gpio_pin_set(0x02);
     }
 
     // configure the time for the first interrupt
@@ -48,18 +56,4 @@ int main() {
     }
 
     return 0; // this should never be reached
-}
-
-
-/************************************************************//**
- * @brief MTIME IRQ handler.
- ***************************************************************/
-void mtime_irq_handler(void) {
-    static int cnt = 0; // counter
-
-    // update the time for the next interrupt
-    neorv32_mtime_set_timecmp(neorv32_mtime_get_timecmp() + DELAY_S*(NEORV32_SYSINFO->CLK / 2));
-
-    // increment counter and mask for lowest 8 bits
-	neorv32_gpio_port_set((cnt++ & 0xFF)<<8); 
 }

@@ -28,7 +28,7 @@ int main() {
 	neorv32_lcd_return_to_origin(); 
 	neorv32_cpu_delay_ms(2000);
 
-	// write the second and last sentence to the LCD
+	// writes the second and last sentence to the LCD
 	neorv32_lcd_write("How are you?"); 
 
 	// go to sleep mode

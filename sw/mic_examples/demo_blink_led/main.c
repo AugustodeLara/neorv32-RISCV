@@ -14,11 +14,9 @@
 int main() {
 
 	int cnt = 0; // counter
-
-	neorv32_gpio_port_set(0x00000FFFFFFF0000); // clear all GPIOs pins
 	
 	while (1) {
-		neorv32_gpio_port_set((cnt++ & 0xFF)<<8); // increment counter and mask for lowest 8 bits
+		neorv32_gpio_port_set((cnt++ & 0xFF) << 9); // increment counter and mask for lowest 8 bits
 		neorv32_cpu_delay_ms(500); // wait 500ms
 	}
 	
