@@ -44,11 +44,307 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[15]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[16]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[18]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[20]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[22]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[23]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[24]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[25]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[26]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[27]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[28]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[29]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[30]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[31]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[32]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[33]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[34]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[35]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[36]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[37]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[38]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[39]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[40]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[41]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[42]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[43]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[44]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[45]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[46]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[47]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[48]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[49]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[50]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[51]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[52]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[53]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[54]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[55]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[56]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[57]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[58]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[59]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[60]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[61]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[62]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[63]",
+					"strict" : false
+				},
+				{
 					"name" : "uart0_txd_o",
 					"strict" : false
 				},
 				{
 					"name" : "uart0_rts_o",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clk_o",
+					"strict" : false
+				},
+				{
+					"name" : "spi_dat_o",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_csn_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sdi_dat_o",
+					"strict" : false
+				},
+				{
+					"name" : "onewire_o",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[5]",
 					"strict" : false
 				},
 				{
@@ -68,11 +364,103 @@
 					"strict" : false
 				},
 				{
+					"name" : "sdi_clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "sdi_csn_i",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[48]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[16]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[32]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[0]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[6]",
+					"name" : "gpio_i[63]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[31]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[47]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[15]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[61]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[29]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[45]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[46]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[62]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[30]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[60]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[28]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[44]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[53]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[37]",
 					"strict" : false
 				},
 				{
@@ -80,7 +468,79 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[54]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[22]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[38]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[58]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[26]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[42]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[43]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[59]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[27]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[50]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[18]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[34]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[55]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[23]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[39]",
 					"strict" : false
 				},
 				{
@@ -88,7 +548,55 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[56]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[24]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[40]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[41]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[9]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[57]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[25]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[49]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[33]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[35]",
 					"strict" : false
 				},
 				{
@@ -96,11 +604,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[4]",
+					"name" : "gpio_i[51]",
 					"strict" : false
 				},
 				{
-					"name" : "msw_irq_i",
+					"name" : "gpio_i[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[52]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[20]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[36]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[4]",
 					"strict" : false
 				},
 				{
@@ -108,7 +632,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "msw_irq_i",
+					"strict" : false
+				},
+				{
 					"name" : "xirq_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "onewire_i",
 					"strict" : false
 				},
 				{
@@ -125,6 +657,14 @@
 				},
 				{
 					"name" : "uart0_rxd_i",
+					"strict" : false
+				},
+				{
+					"name" : "sdi_dat_i",
+					"strict" : false
+				},
+				{
+					"name" : "spi_dat_i",
 					"strict" : false
 				}
 			]

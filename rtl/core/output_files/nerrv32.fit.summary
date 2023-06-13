@@ -1,17 +1,17 @@
-Fitter Status : Successful - Tue May 30 00:18:30 2023
-Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fitter Status : Successful - Mon Jun 12 20:07:57 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : nerrv32
 Top-level Entity Name : neorv32_top
 Family : Cyclone IV GX
 Device : EP4CGX150DF31C7
 Timing Models : Final
-Total logic elements : 3,354 / 149,760 ( 2 % )
-    Total combinational functions : 3,084 / 149,760 ( 2 % )
-    Dedicated logic registers : 1,512 / 149,760 ( 1 % )
-Total registers : 1512
+Total logic elements : 3,929 / 149,760 ( 3 % )
+    Total combinational functions : 3,591 / 149,760 ( 2 % )
+    Dedicated logic registers : 1,983 / 149,760 ( 1 % )
+Total registers : 1983
 Total pins : 390 / 508 ( 77 % )
 Total virtual pins : 0
-Total memory bits : 231,424 / 6,635,520 ( 3 % )
+Total memory bits : 362,496 / 6,635,520 ( 5 % )
 Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )
 Total GXB Receiver Channel PCS : 0 / 8 ( 0 % )
 Total GXB Receiver Channel PMA : 0 / 8 ( 0 % )

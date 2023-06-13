@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CGX150DF31C7
 set_global_assignment -name TOP_LEVEL_ENTITY neorv32_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:46:30  MAY 08, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -164,9 +164,37 @@ set_location_assignment PIN_AE5 -to gpio_o[55]
 set_location_assignment PIN_AH2 -to gpio_o[56]
 set_location_assignment PIN_AE3 -to gpio_o[57]
 set_location_assignment PIN_AH4 -to gpio_o[58]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_AF27 -to gpio_o[63]
 set_location_assignment PIN_AG3 -to gpio_o[62]
 set_location_assignment PIN_AJ3 -to gpio_o[61]
 set_location_assignment PIN_AF4 -to gpio_o[60]
 set_location_assignment PIN_AE4 -to gpio_o[59]
+set_location_assignment PIN_AE25 -to xirq_i[0]
+set_location_assignment PIN_AF30 -to xirq_i[1]
+set_location_assignment PIN_AG26 -to xirq_i[2]
+set_location_assignment PIN_Y21 -to xirq_i[3]
+set_location_assignment PIN_V28 -to gpio_i[0]
+set_location_assignment PIN_U30 -to gpio_i[1]
+set_location_assignment PIN_V21 -to gpio_i[2]
+set_location_assignment PIN_C2 -to gpio_i[3]
+set_location_assignment PIN_AB30 -to gpio_i[4]
+set_location_assignment PIN_U21 -to gpio_i[5]
+set_location_assignment PIN_T28 -to gpio_i[6]
+set_location_assignment PIN_R30 -to gpio_i[7]
+set_location_assignment PIN_G16 -to gpio_i[56]
+set_location_assignment PIN_F17 -to gpio_i[57]
+set_location_assignment PIN_D18 -to gpio_i[58]
+set_location_assignment PIN_F18 -to gpio_i[59]
+set_location_assignment PIN_D19 -to gpio_i[60]
+set_location_assignment PIN_K21 -to gpio_i[61]
+set_location_assignment PIN_F19 -to gpio_i[62]
+set_location_assignment PIN_K22 -to gpio_i[63]
+set_location_assignment PIN_D22 -to gpio_o[44]
+set_location_assignment PIN_D21 -to gpio_o[45]
+set_location_assignment PIN_D23 -to gpio_o[46]
+set_location_assignment PIN_D24 -to gpio_o[47]
+set_location_assignment PIN_B28 -to gpio_o[48]
+set_location_assignment PIN_C25 -to gpio_o[49]
+set_location_assignment PIN_C26 -to gpio_o[50]
+set_location_assignment PIN_D28 -to gpio_o[51]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

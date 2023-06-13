@@ -124,13 +124,13 @@ entity neorv32_top is
     IO_UART1_EN                  : boolean := false;  -- implement secondary universal asynchronous receiver/transmitter (UART1)?
     IO_UART1_RX_FIFO             : natural := 1;      -- RX fifo depth, has to be a power of two, min 1
     IO_UART1_TX_FIFO             : natural := 1;      -- TX fifo depth, has to be a power of two, min 1
-    IO_SPI_EN                    : boolean := false;  -- implement serial peripheral interface (SPI)?
+    IO_SPI_EN                    : boolean := true;  -- implement serial peripheral interface (SPI)?
     IO_SPI_FIFO                  : natural := 1;      -- SPI RTX fifo depth, has to be a power of two, min 1
-    IO_SDI_EN                    : boolean := false;  -- implement serial data interface (SDI)?
-    IO_SDI_FIFO                  : natural := 0;      -- SDI RTX fifo depth, has to be zero or a power of two
+    IO_SDI_EN                    : boolean := true;  -- implement serial data interface (SDI)?
+    IO_SDI_FIFO                  : natural := 1;      -- SDI RTX fifo depth, has to be zero or a power of two
     IO_TWI_EN                    : boolean := false;  -- implement two-wire interface (TWI)?
-    IO_PWM_NUM_CH                : natural := 0;      -- number of PWM channels to implement (0..12); 0 = disabled
-    IO_WDT_EN                    : boolean := false;  -- implement watch dog timer (WDT)?
+    IO_PWM_NUM_CH                : natural := 6;      -- number of PWM channels to implement (0..12); 0 = disabled
+    IO_WDT_EN                    : boolean := true;  -- implement watch dog timer (WDT)?
     IO_TRNG_EN                   : boolean := false;  -- implement true random number generator (TRNG)?
     IO_TRNG_FIFO                 : natural := 1;      -- TRNG fifo depth, has to be a power of two, min 1
     IO_CFS_EN                    : boolean := false;  -- implement custom functions subsystem (CFS)?
@@ -141,7 +141,7 @@ entity neorv32_top is
     IO_NEOLED_TX_FIFO            : natural := 1;      -- NEOLED FIFO depth, has to be a power of two, min 1
     IO_GPTMR_EN                  : boolean := false;  -- implement general purpose timer (GPTMR)?
     IO_XIP_EN                    : boolean := false;  -- implement execute in place module (XIP)?
-    IO_ONEWIRE_EN                : boolean := false;  -- implement 1-wire interface (ONEWIRE)?
+    IO_ONEWIRE_EN                : boolean := true;  -- implement 1-wire interface (ONEWIRE)?
     IO_DMA_EN                    : boolean := false   -- implement direct memory access controller (DMA)?
   );
   port (

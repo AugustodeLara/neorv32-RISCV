@@ -1,13 +1,13 @@
-/* Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition */
+/* Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CGX150DF31) Path("C:/Users/yagx0/OneDrive/Desktop/SD/Projects/neorv32-RISCV/rtl/core/output_files/") File("nerrv32.sof") MfrSpec(OpMask(1));
+		Device PartName(EPCS64) Path("/home/yag/Desktop/SD/neorv32-RISCV/rtl/core/") File("output_file.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(JTAG);
+	ChainType(asc);
 AlteraEnd;
