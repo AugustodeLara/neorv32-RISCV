@@ -1,4 +1,7 @@
 /**********************************************************************//**
+ * @author J.C.E. Barcellos
+ * @author Y.A. Guevara
+ * @author R.Q. Do Ó
  * @file neorv32_lcd.c
  * @brief Liquid Crystal Display (LCD) HW driver source file.
  *
@@ -20,19 +23,19 @@ void neorv32_lcd_display_on(void){
     
     neorv32_gpio_port_set(0);
 
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x00 << 52);
+    neorv32_gpio_port_set((uint64_t)0x08 << 60 );    // Result in 0x 8000 0000 0000 0000 // 0b 1000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x03 << 56 | (uint64_t)0x08 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0838 << 60 );    // Result in 0x 8380 0000 0000 0000 // 0b 1000 0011 1000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x03 << 56 | (uint64_t)0x08 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0938 << 60 );    // Result in 0x 9380 0000 0000 0000 // 0b 1000 0011 1000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x03 << 56 | (uint64_t)0x08 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0838 << 60 );
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x0F << 52);
+    neorv32_gpio_port_set((uint64_t)0x080F << 60 );
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x0F << 52);
+    neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x0F << 52);
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x0F << 52);
+    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x0F << 52);
     neorv32_cpu_delay_ms(10);
 }
 
@@ -41,9 +44,9 @@ void neorv32_lcd_display_on(void){
  **************************************************************************/
 void neorv32_lcd_clear_display(void){
 
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x01 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0801 << 60  );
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x01 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0901 << 60  );
     neorv32_cpu_delay_ms(10);
 }
 
@@ -52,9 +55,9 @@ void neorv32_lcd_clear_display(void){
  **************************************************************************/
 void neorv32_lcd_return_to_origin(void){
 
-    neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x02 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0802 << 60 );
     neorv32_cpu_delay_ms(10);
-    neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x00 << 56 | (uint64_t)0x02 << 52);
+    neorv32_gpio_port_set((uint64_t)0x0902 << 60 );
     neorv32_cpu_delay_ms(10);
 }
 
@@ -68,9 +71,9 @@ void neorv32_lcd_move_cursor_left(int n){
     int i = 0; 
 
     for(i = 0; i<=n; i++){
-        neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x01 << 56 | (uint64_t)0x00 << 52);
+        neorv32_gpio_port_set((uint64_t)0x081 << 60 );
         neorv32_cpu_delay_ms(10);
-        neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x01 << 56 | (uint64_t)0x00 << 52);
+        neorv32_gpio_port_set((uint64_t)0x091 << 60 );
         neorv32_cpu_delay_ms(10);
     }
 }
@@ -85,9 +88,9 @@ void neorv32_lcd_move_cursor_right(int n){
     int i = 0; 
 
     for(i = 0; i<=n; i++){
-        neorv32_gpio_port_set((uint64_t)0x08 << 60 | (uint64_t)0x01 << 56 | (uint64_t)0x04 << 52);
+        neorv32_gpio_port_set((uint64_t)0x0814 << 60 );
         neorv32_cpu_delay_ms(10);
-        neorv32_gpio_port_set((uint64_t)0x09 << 60 | (uint64_t)0x01 << 56 | (uint64_t)0x04 << 52);
+        neorv32_gpio_port_set((uint64_t)0x0914 << 60 );
         neorv32_cpu_delay_ms(10);
     }
 }

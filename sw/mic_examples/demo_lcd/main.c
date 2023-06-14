@@ -1,6 +1,7 @@
 /************************************************************//**
  * @file demo_lcd/main.c
  * @author J.C.E. Barcellos
+ * @author Y.A. Guevara
  * @brief A simple LCD application.
  ***************************************************************/
 #include <neorv32.h>
@@ -21,15 +22,15 @@ int main() {
 
 	// writes the first sentence to the LCD
 	neorv32_lcd_write("Hello, guys!"); 
-	neorv32_cpu_delay_ms(2000);
+	neorv32_cpu_delay_ms(500);
 
 	// clear the LCD and return the cursor to its origin
 	neorv32_lcd_clear_display(); 
 	neorv32_lcd_return_to_origin(); 
-	neorv32_cpu_delay_ms(2000);
+	neorv32_cpu_delay_ms(500);
 
 	// writes the second and last sentence to the LCD
-	neorv32_lcd_write("How are you?"); 
+	neorv32_lcd_write("How are you?? ;)"); 
 
 	// go to sleep mode
     while(1) {
