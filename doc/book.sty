@@ -11,7 +11,7 @@
 %
 
 \ProvidesPackage{book}
-
+\usepackage{subfig}
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage[T1]{fontenc}  
 \usepackage[utf8]{inputenc}
@@ -19,8 +19,19 @@
 \usepackage{ae}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,      
+    urlcolor=blue
+}
+
+\addto\extrasenglish{%
+    \renewcommand{\chapterautorefname}{Chapter}
+    \renewcommand{\sectionautorefname}{Section}
+}
 \usepackage{fancyhdr}
-\usepackage{subfigure}
+%\usepackage{subfigure}
 \usepackage{nomencl}				% Nomenclature list
 \usepackage{float}
 \usepackage{titlesec}
@@ -45,9 +56,37 @@
 \usepackage{longtable}              % Multiple pages table
 \usepackage[math]{iwona}
 \usepackage{xcolor, colortbl}
+\usepackage{lstautogobble}
 
 % URLs font style
 \urlstyle{same}
+
+% Listings style
+\lstdefinestyle{mystyle_c}{
+    basicstyle=\ttfamily,
+    columns=flexible,
+    showstringspaces=false
+    mathescape=true,
+    escapeinside=||,
+    autogobble,
+    %frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4, % tab space width
+    commentstyle=\color{purple}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{red} % string color
+}
+
+\lstdefinestyle{mystyle_bash}{
+    basicstyle=\ttfamily,
+    columns=flexible,
+    showstringspaces=false
+    mathescape=true,
+    escapeinside=||,
+    autogobble,
+    %frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4 % tab space width
+}
+
 
 % Bibliography style (order of appearance)
 \bibliographystyle{ieeetr}

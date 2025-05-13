@@ -1,0 +1,229 @@
+%
+% fpga_pinout.tex
+%
+% Copyright (C) 2023 UFSC.
+%
+% DOCUMENTATION-TEMPLATE
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+% International License. To view a copy of this license,
+% visit http://creativecommons.org/licenses/by-sa/4.0/.
+%
+
+
+\chapter{FPGA Output GPIO Pinout}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+               & \quad \quad GPIO\_o [0] & \quad \quad PIN\_AA25 & \quad \quad LEDG [0]\\
+               & \quad \quad GPIO\_o [1] & \quad \quad PIN\_AB25 & \quad \quad LEDG [1]\\
+               & \quad \quad GPIO\_o [2] & \quad \quad PIN\_F27  & \quad \quad LEDG [2]\\
+        LEDG   & \quad \quad GPIO\_o [3] & \quad \quad PIN\_F26  & \quad \quad LEDG [3]\\        
+               & \quad \quad GPIO\_o [4] & \quad \quad PIN\_W26  & \quad \quad LEDG [4]\\
+               & \quad \quad GPIO\_o [5] & \quad \quad PIN\_Y22  & \quad \quad LEDG [5]\\
+               & \quad \quad GPIO\_o [6] & \quad \quad PIN\_Y25  & \quad \quad LEDG [6]\\
+               & \quad \quad GPIO\_o [7] & \quad \quad PIN\_AA22 & \quad \quad LEDG [7]\\
+               & \quad \quad GPIO\_o [8] & \quad \quad PIN\_J25  & \quad \quad LEDG [8]\\
+            \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:ledg_o} Green LEDs pinout}
+\end{table}
+
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+        
+               & \quad \quad GPIO\_o [9]  & \quad \quad PIN\_T23 & \quad \quad LEDR [0]\\
+               & \quad \quad GPIO\_o [10] & \quad \quad PIN\_T24 & \quad \quad LEDR [1]\\
+               & \quad \quad GPIO\_o [11] & \quad \quad PIN\_V27 & \quad \quad LEDR [2]\\
+        LEDR   & \quad \quad GPIO\_o [12] & \quad \quad PIN\_W25 & \quad \quad LEDR [3]\\        
+               & \quad \quad GPIO\_o [13] & \quad \quad PIN\_T21 & \quad \quad LEDR [4]\\
+               & \quad \quad GPIO\_o [14] & \quad \quad PIN\_T26 & \quad \quad LEDR [5]\\
+               & \quad \quad GPIO\_o [15] & \quad \quad PIN\_R25 & \quad \quad LEDR [6]\\
+               & \quad \quad GPIO\_o [16] & \quad \quad PIN\_E15 & \quad \quad LEDR [7]\\
+
+    \end{tabular}
+    \caption{\label{tab:ledr_o}Red LEDs pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering 
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+
+               & \quad \quad GPIO\_o [16] & \quad \quad PIN\_E15 & \quad \quad HEX0 [0]\\
+               & \quad \quad GPIO\_o [17] & \quad \quad PIN\_E12 & \quad \quad HEX0 [1]\\
+               & \quad \quad GPIO\_o [18] & \quad \quad PIN\_G11 & \quad \quad HEX0 [2]\\
+        HEX0   & \quad \quad GPIO\_o [19] & \quad \quad PIN\_F11 & \quad \quad HEX0 [3]\\        
+               & \quad \quad GPIO\_o [20] & \quad \quad PIN\_F16 & \quad \quad HEX0 [4]\\
+               & \quad \quad GPIO\_o [21] & \quad \quad PIN\_D16 & \quad \quad HEX0 [5]\\
+               & \quad \quad GPIO\_o [22] & \quad \quad PIN\_F14 & \quad \quad HEX0 [6]\\
+        \hline
+               & \quad \quad GPIO\_o [23] & \quad \quad PIN\_G14 & \quad \quad HEX1 [0]\\
+               & \quad \quad GPIO\_o [24] & \quad \quad PIN\_B13 & \quad \quad HEX1 [1]\\
+               & \quad \quad GPIO\_o [25] & \quad \quad PIN\_G13 & \quad \quad HEX1 [2]\\
+        HEX1   & \quad \quad GPIO\_o [26] & \quad \quad PIN\_F12 & \quad \quad HEX1 [3]\\        
+               & \quad \quad GPIO\_o [27] & \quad \quad PIN\_G12 & \quad \quad HEX1 [4]\\
+               & \quad \quad GPIO\_o [28] & \quad \quad PIN\_J9  & \quad \quad HEX1 [5]\\
+               & \quad \quad GPIO\_o [29] & \quad \quad PIN\_G10 & \quad \quad HEX1 [6]\\    
+        \hline
+               & \quad \quad GPIO\_o [30] & \quad \quad PIN\_G8   & \quad \quad HEX2 [0]\\
+               & \quad \quad GPIO\_o [31] & \quad \quad PIN\_G7   & \quad \quad HEX2 [1]\\
+               & \quad \quad GPIO\_o [32] & \quad \quad PIN\_F7   & \quad \quad HEX2 [2]\\
+        HEX2   & \quad \quad GPIO\_o [33] & \quad \quad PIN\_AG30 & \quad \quad HEX2 [3]\\        
+               & \quad \quad GPIO\_o [34] & \quad \quad PIN\_F6   & \quad \quad HEX2 [4]\\
+               & \quad \quad GPIO\_o [35] & \quad \quad PIN\_F4    & \quad \quad HEX2 [5]\\
+               & \quad \quad GPIO\_o [36] & \quad \quad PIN\_F10  & \quad \quad HEX2 [6]\\  
+        \hline
+               & \quad \quad GPIO\_o [37] & \quad \quad PIN\_D10 & \quad \quad HEX3 [0]\\
+               & \quad \quad GPIO\_o [38] & \quad \quad PIN\_D7  & \quad \quad HEX3 [1]\\
+               & \quad \quad GPIO\_o [39] & \quad \quad PIN\_E6  & \quad \quad HEX3 [2]\\
+        HEX3   & \quad \quad GPIO\_o [40] & \quad \quad PIN\_E4  & \quad \quad HEX3 [3]\\        
+               & \quad \quad GPIO\_o [41] & \quad \quad PIN\_E3  & \quad \quad HEX3 [4]\\
+               & \quad \quad GPIO\_o [42] & \quad \quad PIN\_D5  & \quad \quad HEX3 [5]\\
+               & \quad \quad GPIO\_o [43] & \quad \quad PIN\_D4  & \quad \quad HEX3 [6]\\
+               
+        
+    \end{tabular}
+    \caption{\label{tab:hex}Display 7-segments pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+                    & \quad \quad GPIO\_o [44] & \quad \quad PIN\_D22  & \quad \quad GPIO [0]\\
+                    & \quad \quad GPIO\_o [45] & \quad \quad PIN\_D21  & \quad \quad GPIO [1]\\
+                    & \quad \quad GPIO\_o [46] & \quad \quad PIN\_D23  & \quad \quad GPIO [2]\\
+        GPIO Output & \quad \quad GPIO\_o [47] & \quad \quad PIN\_D24  & \quad \quad GPIO [3]\\        
+                    & \quad \quad GPIO\_o [48] & \quad \quad PIN\_B28  & \quad \quad GPIO [4]\\
+                    & \quad \quad GPIO\_o [49] & \quad \quad PIN\_C25  & \quad \quad GPIO [5]\\
+                    & \quad \quad GPIO\_o [50] & \quad \quad PIN\_C26  & \quad \quad GPIO [6]\\
+                    & \quad \quad GPIO\_o [51] & \quad \quad PIN\_D28  & \quad \quad GPIO [7]\\
+            \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:gpio_o}GPIO output pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+        
+               & \quad \quad GPIO\_o [52] & \quad \quad PIN\_AG4  & \quad \quad DATA [0]\\
+               & \quad \quad GPIO\_o [53] & \quad \quad PIN\_AF3  & \quad \quad DATA [1]\\
+               & \quad \quad GPIO\_o [54] & \quad \quad PIN\_AH3  & \quad \quad DATA [2]\\
+               & \quad \quad GPIO\_o [55] & \quad \quad PIN\_AE5  & \quad \quad DATA [3]\\        
+               & \quad \quad GPIO\_o [56] & \quad \quad PIN\_AH2  & \quad \quad DATA [4]\\
+               & \quad \quad GPIO\_o [57] & \quad \quad PIN\_AE3  & \quad \quad DATA [5]\\
+        LCD    & \quad \quad GPIO\_o [58] & \quad \quad PIN\_AH4  & \quad \quad DATA [6]\\  
+               & \quad \quad GPIO\_o [59] & \quad \quad PIN\_AE4  & \quad \quad DATA [7]\\ 
+               & \quad \quad GPIO\_o [60] & \quad \quad PIN\_AF4  & \quad \quad EN\\
+               & \quad \quad GPIO\_o [61] & \quad \quad PIN\_AJ3  & \quad \quad RW\\
+               & \quad \quad GPIO\_o [62] & \quad \quad PIN\_AG3  & \quad \quad RS\\
+               & \quad \quad GPIO\_o [63] & \quad \quad PIN\_AF27 & \quad \quad ON\\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{\label{tab:lcd_o}LCD display pinout}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{FPGA Input GPIO Pinout}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+               & \quad \quad GPIO\_i [0] & \quad \quad PIN\_V28  & \quad \quad SW [0]\\
+               & \quad \quad GPIO\_i [1] & \quad \quad PIN\_U30  & \quad \quad SW [1]\\
+               & \quad \quad GPIO\_i [2] & \quad \quad PIN\_V21  & \quad \quad SW [2]\\
+        SW     & \quad \quad GPIO\_i [3] & \quad \quad PIN\_C2   & \quad \quad SW [3]\\        
+               & \quad \quad GPIO\_i [4] & \quad \quad PIN\_AB20 & \quad \quad SW [4]\\
+               & \quad \quad GPIO\_i [5] & \quad \quad PIN\_U21  & \quad \quad SW [5]\\
+               & \quad \quad GPIO\_i [6] & \quad \quad PIN\_T28  & \quad \quad SW [6]\\
+               & \quad \quad GPIO\_i [7] & \quad \quad PIN\_IR30 & \quad \quad SW [7]\\
+            \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:sw_i}Switches pinout}
+\end{table}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+                    & \quad \quad GPIO\_i [56] & \quad \quad PIN\_G16  & \quad \quad GPIO [0]\\
+                    & \quad \quad GPIO\_i [57] & \quad \quad PIN\_F17  & \quad \quad GPIO [1]\\
+                    & \quad \quad GPIO\_i [58] & \quad \quad PIN\_D18  & \quad \quad GPIO [2]\\
+        GPIO Input  & \quad \quad GPIO\_i [59] & \quad \quad PIN\_F18  & \quad \quad GPIO [3]\\        
+                    & \quad \quad GPIO\_i [60] & \quad \quad PIN\_D19  & \quad \quad GPIO [4]\\
+                    & \quad \quad GPIO\_i [61] & \quad \quad PIN\_K21  & \quad \quad GPIO [5]\\
+                    & \quad \quad GPIO\_i [62] & \quad \quad PIN\_F19  & \quad \quad GPIO [6]\\
+                    & \quad \quad GPIO\_i [63] & \quad \quad PIN\_K22  & \quad \quad GPIO [7]\\
+
+            \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:gpio_i}Input GPIO pinout}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{FPGA Interrupts Pinout}
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+                    & \quad \quad xirq\_i [0]  & \quad \quad PIN\_AE25  & \quad \quad KEY [1]\\
+                    & \quad \quad xirq\_i [1]  & \quad \quad PIN\_AF30  & \quad \quad KEY [2]\\
+        Interrupts  & \quad \quad xirq\_i [2]  & \quad \quad PIN\_AG26  & \quad \quad GPIO [34]\\
+                    & \quad \quad xirq\_i [3]  & \quad \quad PIN\_Y21   & \quad \quad GPIO [35]\\        
+              
+          \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:xirq_i}Interrupts pinout}
+\end{table}
+
+
+\begin{table}[!htb]\scriptsize
+    \centering
+    \begin{tabular}{c c c c}
+        \toprule[1.5pt]
+        \textbf{Type} & \quad \quad \textbf{NEORV32 PIN} & \quad \quad \textbf{FPGA Pin} & \quad \quad \textbf{Signal Name}  \\
+          
+        \midrule
+        Clock      & \quad \quad clk\_i & \quad \quad PIN\_AJ16  & \quad \quad CLOCK\_50\\
+        Reset      & \quad \quad rstn\_i & \quad \quad -  & \quad \quad KEY[0]\\
+   
+          \bottomrule[1.5pt]
+         
+    \end{tabular}
+    \caption{\label{tab:sys}Clock pinout}
+\end{table}

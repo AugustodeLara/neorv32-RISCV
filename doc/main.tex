@@ -11,7 +11,11 @@
 %
 
 \documentclass[a4paper,12pt]{book}
-
+\usepackage{minted}
+\usepackage[most]{tcolorbox}
+\usepackage{adjustbox}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{lipsum}
 \usepackage{book}
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
@@ -37,7 +41,14 @@
 \usepackage{soul}
 
 \sethlcolor{lightgray}
+\usepackage[framemethod=tikz]{mdframed}
 
+\surroundwithmdframed[
+  hidealllines=true,
+  backgroundcolor=lightgray,
+  innerleftmargin=15pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt]{lstlisting}
 
 \begin{document}
 
@@ -64,10 +75,13 @@
     \pagenumbering{arabic}
     \setcounter{page}{1}
 
-    \input{chapters/introduction}
-    \input{chapters/programing}
-    \input{chapters/examples}
-    \input{chapters/references}
-    \input{appendices/appendices}
+    \input{chapters/introduction} % presents the book
+    \input{chapters/riscv} % presents the RISC-V architecture
+    \input{chapters/c_language} % presents the c language
+    \input{chapters/peripherals} % presents the peripherals and the board 
+    \input{chapters/programing} % chapter for the technician
+    \input{chapters/examples} % show high-level examples 
+    \input{chapters/references} % some references
+    \input{appendices/appendices} % appendices with some libraries and tables
 
 \end{document}
